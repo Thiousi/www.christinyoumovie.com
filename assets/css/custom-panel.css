@@ -1,0 +1,54 @@
+.topbar {
+  position: fixed;
+  z-index: 101; /* conflict with .visualmarkdown-toolbar */
+}
+
+.mainbar .btn-submit {
+  position: fixed;
+  top: 7px;
+  right: 140px;
+  z-index: 102;
+  color: #fff;
+  border-color: #fff;
+  background: #000;
+}
+@media screen and (max-width: 480px) {
+  .mainbar .btn-submit {
+    top: auto;
+    bottom: 7px;
+    right: 7px;
+  }
+}
+
+.mainbar .btn-submit:hover {
+  background: #fff;
+  color: #000;
+}
+
+.mainbar .btn-submit.btn-positive {
+  border-color: #8dae28;
+  color: #fff; 
+  background: #8dae28
+}
+
+.modal-content {
+  border-radius: 0;
+  box-shadow: none;
+}
+.modal-content .form .field-content .input {
+  border: 1px solid #bbb;
+}
+.modal-content .form .field-content .input:focus {
+  border: 1px solid #888;
+}
+.modal-content .form .buttons .btn {
+  border: 1px solid #888;
+  color: #333;
+  border-radius: 0;
+}
+.modal-content .form .buttons .btn:hover {
+  border: 1px solid #888;
+  color: #fff;
+  border-radius: 0;
+  background-color: #888;
+}

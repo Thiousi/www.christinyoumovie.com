@@ -1,0 +1,240 @@
+$nav-width: 300px;
+
+.off-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -$nav-width;
+  z-index: 100;
+  width: $nav-width;
+  overflow-y: scroll;
+  background: $white;
+  
+  .nav-inner {
+    min-height: 444px;
+    height: 100%;
+//    overflow-y: scroll;
+    //background: red;
+//    @include transition(all 0.5s);
+
+    @include display(flex);
+    @include flex-direction(column);
+    //@include justify-content(center);
+    //@include align-content(center);
+    //@include align-items(center);
+
+
+    .menu {
+      @include flex(1);
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
+      margin-bottom: -28px;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li {
+          padding: 16px 0;
+          a {
+//            padding-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 3px;
+            font-size: 20px;
+
+            @include media($medium-screen) {
+              letter-spacing: 3px;
+              font-size: 25px;
+            }
+
+            &.active {
+              color: $darker-gray;
+
+            }
+          }
+          @include media($medium-screen) {
+            padding: 30px 0;
+          }
+        }
+      }
+      .lang-nav {
+        margin-top: 20px;
+        padding: 16px 0;
+        text-align: center;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 400;
+        a {
+          &.active {
+            color: $darker-gray;
+
+          }
+        }
+        @include media($medium-screen) {
+          font-size: 16px;
+        }
+      }
+      @include media($medium-screen) {
+        margin-bottom: -68px;
+        ul {
+//          padding: 30px 0;
+        }
+      }
+    }
+    .social-icons-nav {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 18px;
+      a {
+        color: $icon-gray;
+        padding: 0 5px;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: $standard-gray;
+        }
+      }
+
+
+    }
+    @include media($medium-screen) {
+      min-height: 700px;
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 98;
+  opacity: 0;
+  visibility: hidden;
+  @include transition(visibility 0s .5s, opacity .5s);
+  
+}
+
+///* Effect Push*/
+.nav-open {
+  @include transform(translate3d(-$nav-width, 0, 0));  
+  @include transition(transform 0.5s);
+  .overlay {
+    opacity: 1;
+    visibility: visible;
+    @include transition-delay(0s);
+  }
+}
+
+.push-container {
+  @include transition(transform 0.5s);
+}
+
+
+
+.off-nav::after {
+  display: none;
+}
+
+// Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+.no-csstransforms3d .st-pusher,
+.no-js .st-pusher {
+  padding-left: 300px;
+}
+
+//Menu Button
+.nav-button {
+  .bt-menu-trigger {
+    border-color: $standard-gray;
+    border-width: 1px;
+    border-style: solid; 
+    @include transition(border-color .4s ease);
+  }
+  &.no-border .bt-menu-trigger {
+    border-color: $white;
+    border-width: 1px;
+    border-style: solid;
+    @include transition(border-color .4s ease);
+  }
+  .bt-menu-trigger {
+    @include transition(border-color .2s ease);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $white;
+    z-index: 101;
+
+  //  &:hover, &:focus {
+  //    background-color: $light-gray;
+  //  }
+    &:hover span, &:hover span:before, &:hover span:after {
+      background-color: $darker-gray;
+    }
+
+    @include media($medium-screen) {
+      top:30px;
+      right: 30px;
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      right: 25%;
+      display: block;
+      width: 50%;
+      height: 2px;
+      margin-top: -1px;
+      background-color: $standard-gray;
+      font-size: 0px;
+      @include user-select(none);
+  //    @include transition(background-color 0.3s);
+    }
+    span:before,
+    span:after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $standard-gray;
+      content: '';
+      @include transition(transform 0.5s);
+
+    }
+    span:before {
+      @include transform(translateY(-5px));
+    }
+    span:after {
+      @include transform(translateY(5px));
+    }
+  }
+
+  &.bt-menu-open {
+    &.no-border .bt-menu-trigger {
+      border: 1px solid $white;
+    }
+    .bt-menu-trigger {
+      border-color: $white;
+      background: none;
+      span {
+        background-color: transparent;
+      }
+      span:before {
+        @include transform(translateY(0) rotate(-45deg));
+      }
+      span:after {
+        @include transform(translateY(0) rotate(45deg));
+      }
+    }
+  }
+}

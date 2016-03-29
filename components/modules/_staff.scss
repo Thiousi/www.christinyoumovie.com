@@ -1,0 +1,102 @@
+.member {
+  position: relative;
+  overflow: hidden;
+  .image {
+    position: relative;
+    @include transition(transform 0.35s);
+    @include transform(translate3d(0, 0, 0));
+    
+    img {
+      display: block;
+      width: 100%;
+      
+    }
+      
+    &:after {
+      content: '\A';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.6);
+      opacity: 0;
+      @include transition(opacity 0.35s);
+    }
+  }
+
+  .name, .role {
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center); 
+  }
+  
+  .name {
+    bottom: 0;
+    background-color: $white;
+    height: 30%;
+    @include transition(transform 0.35s);
+    @include transform(translate3d(0, 100%, 0));
+  }
+  
+  .role {
+    top: 0;
+    height: 75%;
+    color: $white;
+    opacity: 0;
+    @include transform(translate3d(0, 30%, 0));
+    @include transition(opacity 0.35s, transform 0.35s);
+  }
+  .no-touchevents &:hover .image, .no-touchevents &:focus .image, .touchevents &.hover_on .image {
+    @include transform(translate3d(0, -30%, 0));
+
+    &:after {
+      opacity: 1;
+    }
+  }
+  .no-touchevents &:hover .name, .no-touchevents &:focus .name, .touchevents &.hover_on .name {
+    @include transform(translate3d(0, 0, 0));
+  }
+  .no-touchevents &:hover .role, .no-touchevents &:focus .role, .touchevents &.hover_on .role {
+    @include transform(translate3d(0, 0, 0));
+    opacity: 1;
+  }
+  
+}
+//// Hover for Desktop
+//.no-touchevents .member {
+////  &:hover .image, &:focus .image {
+////    @include transform(translate3d(0, -30%, 0));
+////
+////    &:after {
+////      opacity: 1;
+////    }
+////  }
+//  &:hover .name, &:focus .name {
+//    @include transform(translate3d(0, 0, 0));
+//  }
+//  &:hover .role, &:focus .role {
+//    @include transform(translate3d(0, 0, 0));
+//    opacity: 1;
+//  }
+//}
+//// Click for Touch Devices
+//.touchevents .member {
+//  &.hover_on .image {
+//    @include transform(translate3d(0, -30%, 0));
+//
+//    &:after {
+//      opacity: 1;
+//    }
+//  }
+//  &.hover_on .name {
+//    @include transform(translate3d(0, 0, 0));
+//  }
+//  &.hover_on .role {
+//    @include transform(translate3d(0, 0, 0));
+//    opacity: 1;
+//  }
+//}

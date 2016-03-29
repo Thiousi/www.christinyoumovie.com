@@ -1,0 +1,405 @@
+$progress-meter-color: #90DD71;
+$progress-background: #EFEFEF;
+$progress-animation-duration: 0.7s;
+$progress-color: white;
+
+.progress-bar-indication {  
+  position: relative;
+  background-color: $progress-background;
+//  border-radius: $base-border-radius;
+//  border: $progress-border;
+//  box-shadow: inset 0 0 3px 0 rgba(darken($progress-background, 50%), 0.15);
+  margin: 10px auto;
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
+  
+
+  span.meter {
+    @include transition(all 2s);
+    @include box-sizing(border-box);
+    background-color: $progress-meter-color;
+    background-repeat: repeat-x;
+    background-size: 40px 40px;
+    border-bottom-right-radius: 0;
+//    border-radius: $base-border-radius /1.5;
+    border-top-right-radius: 0;
+//    border: $progress-meter-border;
+    display: block;
+    height: 100%;
+//    width: 60%;
+    
+    
+    &.zero {
+      width: 0 !important;
+      
+      p, p:after, p:before {
+        opacity: 0;
+        left: 0 !important;
+//        @include transition(all 1s);
+      }
+    }
+  }
+
+  p {
+    color: $progress-color;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: .1em .5em;
+    text-align: center;
+    height: 100%;
+    opacity: 1;
+    @include transition(left 2s, opacity 1.5s .5s);
+    
+    &.outside, &.outside-m {
+      position:absolute;
+      color:#888;
+      padding-left:20px;
+    }
+    @include media($medium-screen) {
+      &.inside.outside-m {
+        position: inherit;
+        color: $white;
+        
+      }
+    }
+//    &:before {
+//      content: 'CHF ';
+//      opacity: 1;
+//    }
+//    &:after {
+//      content: '.–';
+//      opacity: 1;
+//    }
+  }
+}
+.meter-percentage {
+  color: $progress-meter-color;
+  font-weight: 300;
+}
+
+.rewards-slider {
+  margin-bottom: 130px;
+  margin-top: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  
+  .slick-dots {
+    margin: 0 -5%;
+  }
+  @media (min-width: 768px) {
+    .slick-track {
+      @include display(flex);
+      @include align-items(stretch);
+    }
+  }
+  .donation-box {
+    position: relative;
+    display: block;
+    @include transition(all .35s);
+    border: $base-border;
+    border-color: $standard-gray;
+    text-align: center;
+    font-weight: 600;
+    padding: 30px 20px;
+    margin: 0 25px;
+    color: $standard-gray;
+    height: auto;
+//    height: 200px;
+//    overflow-y: scroll;
+    
+    h3 {
+      font-size: 25px;
+      &::after {
+        content: ' ';
+        display: block;
+        background: $standard-gray;
+        height: 2px;
+        width: 40px;
+        margin: 20px auto;
+      }
+    }
+    p {
+      margin-top: 14px;
+      padding: 0;
+
+      @include media($medium-screen) {
+      }
+    }
+    li {
+      font-weight: 300;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid $standard-gray;
+      &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    &.active {
+      cursor: pointer;
+      background: $standard-gray;
+      color: $white;
+      
+      h3:after {
+        background: $white;
+      }
+      li {
+        border-bottom-color: $white;
+      }
+    }
+    .donation-overlay {
+      display: none;
+//      @include display(flex);
+      @include justify-content(center);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($standard-gray, 0.9);
+      
+      
+      span {
+        @include align-self(center);
+        color: $white;
+        text-transform: uppercase;
+        font-size: 22px;
+        padding: 20px;
+      }
+    }
+    .no-touchevents &:hover .donation-overlay {
+      @include display(flex);
+      
+    }
+    .no-touchevents &.active:hover .donation-overlay {
+      display: none;
+    }
+  }
+}
+
+section.accordion {
+  padding-bottom: 0px;
+  
+  
+  .content {
+    display: none;
+    background: $white;
+    margin: 0 -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    .inner {
+      padding: 50px 0;
+      h3 {
+        margin-bottom: 30px;
+      }
+    }
+    .form {
+      text-align: right;
+      
+      @include media($medium-screen) {
+          margin: 0 auto;
+          padding-left: 0px;
+          padding-right: 0px;
+          max-width:  600px;
+          min-width: 450px;
+      }
+    }
+    .payment-options {
+      text-align: center;
+       
+      .btn-group {
+        @include outer-container(400px);
+        display: block;
+        
+        .btn-container {  
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .paypal-btn {
+            padding: 0;
+            margin: 0;
+            
+            
+            fieldset {
+              margin-top: -8px;
+              background: white;
+              border: $base-border;
+              legend {
+                text-align: left;
+                margin-left: 10px;
+                padding: 0 5px;
+                img {
+                  display: block;
+                  margin-top: 5px;
+                  height: 18px;
+                }
+              }
+            }
+            .no-touchevents & fieldset:hover, &.active fieldset {
+              background-color: $bg-gray;
+            }
+          }
+        }
+
+        a {
+          width: 100%;
+          min-width: 250px;
+        }
+        .postfinance, .paypal {
+          padding: 8px;
+          img {
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .paypal {
+          padding-top: 0;
+          padding-bottom: 8px;
+          border: none;
+          background: none;
+        }
+        .banktransfer {
+          padding: 19px 5px;
+          font-weight: 700;
+        }
+        .postfinance, .banktransfer {
+          .no-touchevents &:hover, &.active {
+            background: $bg-gray;
+            color: $standard-gray;
+          }
+        }
+        
+        @include media($midlarge-screen) {
+          @include outer-container(800px);
+          @include display(flex);
+          @include justify-content(center);
+          
+          .btn-container {
+            margin-right: 20px;
+            margin-bottom: 0;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    
+    
+    
+    .content-2 {
+      background: $bg-gray;
+      margin: 0 -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      
+//      &.pf {
+//        input {
+//          margin-bottom: 20px;
+//        }
+//      }
+
+      .bank-transfer, .e-payment, .paypal  {
+        text-align: right;
+        
+        .infotext {
+          text-align: center;
+          margin-bottom: 30px;
+          
+          @include media($medium-screen) {
+            padding: 0 13%;
+          }
+        }
+        .hide-after-send {
+          &.email-sent .send, &.email-sent input, .success-message {
+            display: none;
+          }
+          &.email-sent .success-message {
+            display: block;
+            text-align: center;
+          }
+        }
+        h3 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        input {
+          margin-bottom: 20px;
+        }
+        .grid-container {
+          @include display(flex);
+          .plz {
+            width: 33%;
+            margin-right: 20px;
+          }
+          .ort {
+
+          }
+        }
+        
+        .hidden {
+          display: none;
+          
+          &.error {
+            display: block;
+            color: red;
+          }
+        }
+      }
+    }
+    
+  }
+  .thankyou {
+    display: none;
+    margin: 0 -20px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $progress-meter-color;
+    &.error {
+      background-color: $error-color;
+    }
+    &.success {
+      @include transition(background-color .5s 1s);
+      p {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 30px; 
+        letter-spacing: 5px;
+        color: $white;
+
+
+        @include media($medium-screen) {
+          font-size: 70px;
+          letter-spacing: 5px;
+        }
+      }
+    }
+    
+  }
+  
+}
+section.action {
+  @include transition(all 1s);
+  &.hide {
+    display: none;
+  }
+}
+
+//.collapsing {
+//  position: relative;
+//  height: 0;
+//  overflow: hidden;
+//  @include transition(height .35s ease, visibility .35s ease);
+////    @include transition-timing-function(ease);
+////    @include transition-duration(.35s);
+////    @include transition-property(height, visibility);
+//}

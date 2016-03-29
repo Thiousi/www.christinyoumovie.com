@@ -1,0 +1,26 @@
+@import "../neat/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// Neat Overrides
+ $column: 10%;
+ $gutter: 20%;
+// $grid-columns: 12;
+
+
+//$column: modular-scale(3, 1em, $golden) !default; // Column width
+//$gutter: modular-scale(3, 2em, $golden) !default; // Gutter between each two columns
+//$column: golden-ratio(2em, 3) !default; // Column width
+//$gutter: golden-ratio(2em, 3) !default; // Gutter between each two columns
+
+$fg-column: $column;
+$fg-gutter: $gutter;
+
+$max-width: em(1920);
+
+// Neat Breakpoints
+$medium-screen: em(640);
+$midlarge-screen: em(860);
+$large-screen: em(1280);
+$xlarge-screen: em(1920);
+
+$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+$large-screen-up: new-breakpoint(min-width $large-screen 8);

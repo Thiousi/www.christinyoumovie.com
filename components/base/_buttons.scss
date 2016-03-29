@@ -1,0 +1,121 @@
+.button, .button-nohover {
+  @include appearance(none);
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+//  border-radius: $base-border-radius;
+  border: none;
+  border: $base-border;
+  color: $standard-gray;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.15;
+  padding: 15px;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: none;
+  outline: none;
+}
+.button {
+  &:hover {
+    background-color: $standard-gray;
+    color: $white;
+    border-color: $base-font-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  &.margin-top {
+    margin-top: 50px;
+  }
+  &.btn-big {
+    font-size: 20px;
+    @include media($medium-screen) {
+      font-size: 25px;
+      padding: 20px 25px;
+    }
+  }
+  &.btn-small {
+    padding: 7px 12px;
+  }
+  &.btn-invert {
+    color: $invert-gray;
+    border-color: $invert-gray;
+    &:hover {
+      background-color: $white;
+      color: $invert-gray;
+      border-color: $white;
+      
+    }
+  }
+  &.active {
+    background-color: $standard-gray;
+    color: $white;
+    border-color: $base-font-color;
+  }
+  &.submit {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 0 0 20px;
+    text-align: right;
+    border: none;
+    color: $standard-gray;
+    background: none;
+    letter-spacing: 1px;
+    line-height: 19px;
+
+    i, img {
+      margin-left: 3px;
+      opacity: .65;
+      height: 19px;
+      top: 3px;
+      position: relative;
+    }
+    &:hover {
+      background-color: none;
+      color: $darker-gray;
+      img {
+        opacity: 1;        
+      }
+    }
+  }
+}
+
+// Inline Submit
+.inline-submit {
+  border:$base-form-border;
+  @include display(flex);
+
+  input, button {
+    border:none !important;
+//        border: 1px solid red;
+  }
+
+  &.focus, &:hover {
+    border-color: $standard-gray;
+  }
+
+  button {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+    @include flex(1 0 auto);
+    span {
+      display: none;
+      @include media($medium-screen) {
+        display: inline;
+      }
+    }
+  }
+  &.erroneous {
+    border-color: red;
+  }
+}

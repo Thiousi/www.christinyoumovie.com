@@ -1,0 +1,280 @@
+// colors
+$main-text: #7f8c97; // main text
+$link: #acb7c0; // anchor tags
+$background: $dark-gray; // body background color
+$color-1: $dark-gray; // blue dark
+$border-content: #eee; // Border Content
+$color-3: #ffffff; // white
+$color-4: $dark-gray; // green
+$color-5: #f0ca45; // yellow
+// fonts 
+//$primary-font: 'Droid Serif', serif;
+//$secondary-font: 'Open Sans', sans-serif;
+@import 'timelinepartials/mixins'; // custom mixins
+//@import 'timelinepartials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+#cd-timeline {
+  position: relative;
+  padding-top: 80px;
+
+  &::before {
+    /* this is the vertical line */
+    content: '';
+    position: absolute;
+    top: 115px;
+    bottom: 40px;
+    left: 34px;
+    width: 2px;
+    background: $background;
+  }
+  @include media($medium-screen) {
+    &::before {
+      left: 50%;
+      margin-left: 1px;
+      bottom: 90px;
+    }
+  }
+  //	@include MQ(L) {
+  ////		margin: {
+  ////			top: 3em;
+  ////			bottom: 3em;
+  ////		}
+  //
+  //		&::before {
+  //			left: 50%;
+  //			margin-left: -2px;
+  //		}
+  //	}
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 50px 0;
+  @include clearfix;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media($medium-screen) {
+    margin: 50px 0 100px 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:first-child .cd-timeline-img.is-hidden, &:last-child .cd-timeline-img.is-hidden {
+    visibility: visible !important;
+  }
+  &:first-child .cd-timeline-img.bounce-in, &:last-child .cd-timeline-img.bounce-in {
+    @include animation(none !important);
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $background;
+//  box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
+  span {
+    top: -24px;
+    left: -25px;
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: $background;
+    @include border-radius(50%);
+    
+    @include display(flex);
+    @include justify-content(center);
+    @include align-items(center);
+    
+  }
+  @include media($medium-screen) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    margin-left: -8px;
+    
+    span {
+      left: -25px;
+      
+    }
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    
+  }
+  .cssanimations &.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations &.bounce-in {
+    visibility: visible;
+    @include animation(cd-bounce-1 .6s);
+    @include transition(opacity .5s);   
+  }
+}
+
+@include keyframes(cd-bounce-1) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 90px;
+  text-align: center;
+  background: $white;
+  border: 1px solid $border-content;
+  padding: 10px;
+  @include clearfix;
+
+  &::after, &::before {
+	right: 100%;
+	top: 35px;
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  }
+
+  &::after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: $white;
+    border-width: 8px;
+    margin-top: -8px;
+  }
+  &::before {
+    border-color: rgba(238, 238, 238, 0);
+    border-right-color: $border-content;
+    border-width: 8px;
+    margin-top: -9px;
+  }
+//  &::before {
+//    content: '';
+//    position: absolute;
+//    top: 16px;
+//    right: 100%;
+//    height: 0;
+//    width: 0;
+//    border: 7px solid transparent;
+//    border-right: 7px solid $color-3;
+//  }
+  @include media($medium-screen) {
+    padding: 30px;
+    margin-left: 0;
+    width: 42%;
+    &::after, &::before {
+      left: 100%;
+      right: auto;
+      top: 33px;
+      border: solid transparent;
+      content: ' ';
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-color: rgba(255, 255, 255, 0);
+      border-left-color: $white;
+      border-width: 8px;
+      margin-top: -8px;
+    }
+    &::before {
+      border-color: rgba(238, 238, 238, 0);
+      border-left-color: $border-content;
+      border-width: 9px;
+      margin-top: -9px;
+    }
+    .cd-timeline-block:nth-child(even) & {
+      float: right;
+      width: 41%;
+      &::before, &::after {
+        top: 33px;
+        left: auto;
+        right: 100%;
+      }
+      &::after {
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: $white;
+        border-width: 8px;
+        margin-top: -8px;
+      }
+      &::before {
+        border-color: rgba(238, 238, 238, 0);
+        border-right-color: $border-content;
+        border-width: 9px;
+        margin-top: -9px;
+      }
+      .cd-read-more {
+        float: right;
+      }
+      .cd-date {
+        left: auto;
+        right: 122%;
+        text-align: right;
+      }
+    }
+  }
+  @include media($large-screen) {
+    width: 45%;
+    .cd-timeline-block:nth-child(even) & {
+      width: 44.5%
+    }
+  }
+  .cssanimations &.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations &.bounce-in {
+    visibility: visible;
+    @include animation(cd-bounce-2 .6s);
+    @include transition(opacity .35s);
+  }
+}
+
+@include media($medium-screen) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    @include animation(cd-bounce-2-inverse .6s);
+  }
+}
+
+@include keyframes(cd-bounce-2) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(cd-bounce-2-inverse) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
