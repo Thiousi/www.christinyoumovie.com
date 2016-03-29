@@ -8,6 +8,7 @@ language: de
 role: admin
 history:
   - support
+  - support/support-ch
   - support/info
   - home
   - about

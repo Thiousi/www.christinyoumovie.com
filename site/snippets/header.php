@@ -12,13 +12,13 @@
   <meta property ="og:site_name" content="<?php echo $site->title()->html() ?>">
   <meta property ="og:url" content="<?php echo url($page->slug()) ?>">
   <meta property ="og:description" content="<?php echo $site->facebooktext()->html() ?>">
-  <meta property ="og:image" content="<?php 
+  <meta property ="og:image" content="<?php
     if($page->hasImages()) {
-      if($page->images()->sortBy('sort', 'asc')) { 
-        echo $page->images()->sortBy('sort', 'asc')->first()->url(); 
-      } else { 
-        $page->images()->first()->url(); 
-        } 
+      if($page->images()->sortBy('sort', 'asc')) {
+        echo $page->images()->sortBy('sort', 'asc')->first()->url();
+      } else {
+        $page->images()->first()->url();
+        }
     }
   ?>">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo url('assets/favicon/apple-touch-icon-57x57.png') ?>" />
@@ -33,12 +33,12 @@
   <?php echo css('assets/css/app.css') ?>
 
   <?php echo js('assets/js/modernizr.touch.min.js') ?>
-  
-  <script src="https://use.typekit.net/ohe1tps.js"></script> 
-  <script>try{Typekit.load({ async: true}); }catch(e){}</script>   
+
+  <script src="https://use.typekit.net/ohe1tps.js"></script>
+  <script>try{Typekit.load({ async: true}); }catch(e){}</script>
   <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
   <?php snippet('google-analytics') ?>
-  
+
 </head>
 
 <body class="home is-loading">
@@ -46,7 +46,7 @@
 
 <?php else: ?>
 
-<?php endif ?>  
+<?php endif ?>
 
   <?php snippet('menu') ?>
 
@@ -57,22 +57,3 @@
         <a href="<?php echo $site->language()->url() ?>" title="Home"><img src="<?php echo url('assets/images/Logo_Siloam.svg') ?>" alt="<?php echo $site->title()->html() ?>" /></a>
       </div>
    
-<section id="banner">
-  <div id="js-parallax-window" class="parallax-window">
-    <?php if($page->isHomePage()): ?>  
-    <div class="parallax-content inner">
-      <h1 data-parallax="title"><?php echo $page->pagetitle()->html() ?></h1>
-      <p data-parallax="tagline"><?php echo $page->pagetagline()->html() ?></p>
-    </div>
-    <?php else: ?>
-      <?php if($page->pagetitle()->isNotEmpty()) {
-        echo '<h1 class="hidden">'. $page->pagetitle()->html() .'</h1>';
-      } ?>
-    <?php endif ?> 
-    <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?><?php echo $page->backgroundimage()->toFile()->url() ?><?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');"></div>
-  </div>
-  <?php if($page->isHomePage() || $page->fullscreen()->isTrue() ): ?>
-  <a href="#start" class="start-scroll" data-parallax="start-arrow"><img class="arrow arrow-down" src="<?php echo url('assets/images/arrow-down.svg'); ?>" /></a>
-  <?php endif ?>  
-</section>
-<div id="start"></div>

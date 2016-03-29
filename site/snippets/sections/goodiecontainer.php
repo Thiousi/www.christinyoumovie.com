@@ -5,7 +5,7 @@
     <div class="rewards-slider">
       <?php foreach ($page->donations()->yaml() as $id => $item): ?>
         <a href="#donation-box-<?php echo $id ?>" data-id="<?php echo $id ?>" class="donation-box trigger">
-          <h3><?php 
+          <h3><?php
                 if(!empty($item['customamount'])) {
                   echo $item['customamount'];
                 } else {
@@ -56,7 +56,7 @@
         <div class="form">
           <form id="postfinance-form-<?php echo $id ?>" method="post" action="https://e-payment.postfinance.ch/ncol/prod/orderstandard.asp" class="postform" name="pfformcustom" target="_blank" novalidate>
             <?php $paymentoption = 'pf'; snippet('support/form', array('id' => $id, 'item' => $item, 'payment' => $paymentoption )) ?>
-            
+
             <input id="pf-pspid-<?php echo $id ?>" type="hidden" name="PSPID" value="<?php echo $page->children()->find('info')->pspid()->html() ?>">
             <input id="pf-language-<?php echo $id ?>" type="hidden" name="LANGUAGE" value="<?php echo $site->language()->locale() ?>">
             <input id="pf-operation-<?php echo $id ?>" type="hidden" name="OPERATION" value="SAL">
@@ -65,10 +65,10 @@
             <input id="pf-accepturl-<?php echo $id ?>" type="hidden" name="ACCEPTURL" value="<?php echo $page->children()->find('thankyou')->url()?>">
             <input id="pf-declineurl-<?php echo $id ?>" type="hidden" name="DECLINEURL" value="<?php echo $page->children()->find('error')->url()?>">
             <input id="pf-cancelurl-<?php echo $id ?>" type="hidden" name="CANCELURL" value="<?php echo $page->children()->find('error')->url()?>">
-            
-            <input id="pf-shasign-<?php echo $id ?>" type="hidden" name="SHASIGN" value="">    
+
+            <input id="pf-shasign-<?php echo $id ?>" type="hidden" name="SHASIGN" value="">
             <button class="button submit pf-trigger-<?php echo $id ?>" type="submit" name="submit"><span><?php echo l::get('payment-options-next') ?></span> <img class="send-arrow" src="<?php echo url('assets/images/send.svg') ?>" alt="<?php echo l::get('payment-options-next') ?>" /></button>
-                 
+
           </form>
         </div>
         <?php else: ?>
@@ -81,7 +81,7 @@
       <div class="inner paypal">
        <h3><?php echo $page->children()->find('info')->titlepaypal()->html() ?></h3>
         <div class="infotext"><?php echo $page->children()->find('info')->infopaypal()->kt() ?></div>
-        <div class="form">          
+        <div class="form">
           <form id="paypal-form-<?php echo $id ?>" class="paypalform" name="ppformcustom" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" novalidate>
             <?php $paymentoption = 'pp'; snippet('support/form', array('id' => $id, 'item' => $item, 'payment' => $paymentoption )) ?>
 
@@ -104,16 +104,16 @@
             <input id="pp-lc-<?php echo $id ?>" type="hidden" name="lc" value="CH">
             <input TYPE="hidden" NAME="return" value="<?php echo $page->children()->find('thankyou')->url()?>">
             <input type="hidden" name="cancel_return" value="<?php echo $page->children()->find('error')->url()?>">
-            
+
             <button class="button submit pf-trigger-<?php echo $id ?>" type="submit" name="submit"><span><?php echo l::get('payment-options-next') ?></span> <img class="send-arrow" src="<?php echo url('assets/images/send.svg') ?>" alt="<?php echo l::get('payment-options-next') ?>" /></button>
             <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1" style="display:none;">
-                 
+
           </form>
         </div>
       </div>
     </div>
     <?php endif ?>
-    <?php if($page->children()->find('info')->showbanktransfer()->bool()): ?>  
+    <?php if($page->children()->find('info')->showbanktransfer()->bool()): ?>
     <div id="transfer-<?php echo $id ?>" class="content-2 bt">
       <div class="inner bank-transfer">
         <h3><?php echo $page->children()->find('info')->titlebanktransfer()->html() ?></h3>
@@ -127,13 +127,13 @@
         </div>
       </div>
     </div>
-    <?php endif ?>     
+    <?php endif ?>
   </div>
   <div id="thankyou-<?php echo $id ?>" class="thankyou">
     <div class="inner">
       <p id="feedback-message-<?php echo $id ?>"></p>
     </div>
-  </div>   
+  </div>
   <?php endforeach ?>
   <?php snippet('support/script') ?>
 </section>
