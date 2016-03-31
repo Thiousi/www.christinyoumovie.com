@@ -3,7 +3,7 @@ $progress-background: #EFEFEF;
 $progress-animation-duration: 0.7s;
 $progress-color: white;
 
-.progress-bar-indication {  
+.progress-bar-indication {
   position: relative;
   background-color: $progress-background;
 //  border-radius: $base-border-radius;
@@ -13,7 +13,7 @@ $progress-color: white;
   margin-top: 40px;
   width: 100%;
   height: 40px;
-  
+
 
   span.meter {
     @include transition(all 2s);
@@ -28,11 +28,11 @@ $progress-color: white;
     display: block;
     height: 100%;
 //    width: 60%;
-    
-    
+
+
     &.zero {
       width: 0 !important;
-      
+
       p, p:after, p:before {
         opacity: 0;
         left: 0 !important;
@@ -52,7 +52,7 @@ $progress-color: white;
     height: 100%;
     opacity: 1;
     @include transition(left 2s, opacity 1.5s .5s);
-    
+
     &.outside, &.outside-m {
       position:absolute;
       color:#888;
@@ -62,7 +62,7 @@ $progress-color: white;
       &.inside.outside-m {
         position: inherit;
         color: $white;
-        
+
       }
     }
 //    &:before {
@@ -73,6 +73,18 @@ $progress-color: white;
 //      content: '.–';
 //      opacity: 1;
 //    }
+  }
+  .amountrange {
+    padding-top: 15px;
+    .amountstart, .amountend {
+      font-weight: 400;
+      text-transform: uppercase;
+      display: inline;
+
+    }
+    .amountend {
+      float: right;
+    }
   }
 }
 .meter-percentage {
@@ -85,7 +97,7 @@ $progress-color: white;
   margin-top: 80px;
   padding-left: 5%;
   padding-right: 5%;
-  
+
   .slick-dots {
     margin: 0 -5%;
   }
@@ -109,7 +121,7 @@ $progress-color: white;
     height: auto;
 //    height: 200px;
 //    overflow-y: scroll;
-    
+
     h3 {
       font-size: 25px;
       &::after {
@@ -143,7 +155,7 @@ $progress-color: white;
       cursor: pointer;
       background: $standard-gray;
       color: $white;
-      
+
       h3:after {
         background: $white;
       }
@@ -161,8 +173,8 @@ $progress-color: white;
       height: 100%;
       width: 100%;
       background-color: rgba($standard-gray, 0.9);
-      
-      
+
+
       span {
         @include align-self(center);
         color: $white;
@@ -173,7 +185,7 @@ $progress-color: white;
     }
     .no-touchevents &:hover .donation-overlay {
       @include display(flex);
-      
+
     }
     .no-touchevents &.active:hover .donation-overlay {
       display: none;
@@ -183,15 +195,15 @@ $progress-color: white;
 
 section.accordion {
   padding-bottom: 0px;
-  
-  
+
+
   .content {
     display: none;
     background: $white;
     margin: 0 -20px;
     padding-left: 20px;
     padding-right: 20px;
-    
+
     .inner {
       padding: 50px 0;
       h3 {
@@ -200,7 +212,7 @@ section.accordion {
     }
     .form {
       text-align: right;
-      
+
       @include media($medium-screen) {
           margin: 0 auto;
           padding-left: 0px;
@@ -211,12 +223,12 @@ section.accordion {
     }
     .payment-options {
       text-align: center;
-       
+
       .btn-group {
         @include outer-container(400px);
         display: block;
-        
-        .btn-container {  
+
+        .btn-container {
           margin-bottom: 20px;
           &:last-child {
             margin-bottom: 0;
@@ -224,8 +236,8 @@ section.accordion {
           .paypal-btn {
             padding: 0;
             margin: 0;
-            
-            
+
+
             fieldset {
               margin-top: -8px;
               background: white;
@@ -275,12 +287,12 @@ section.accordion {
             color: $standard-gray;
           }
         }
-        
+
         @include media($midlarge-screen) {
           @include outer-container(800px);
           @include display(flex);
           @include justify-content(center);
-          
+
           .btn-container {
             margin-right: 20px;
             margin-bottom: 0;
@@ -291,15 +303,15 @@ section.accordion {
         }
       }
     }
-    
-    
-    
+
+
+
     .content-2 {
       background: $bg-gray;
       margin: 0 -20px;
       padding-left: 20px;
       padding-right: 20px;
-      
+
 //      &.pf {
 //        input {
 //          margin-bottom: 20px;
@@ -308,11 +320,11 @@ section.accordion {
 
       .bank-transfer, .e-payment, .paypal  {
         text-align: right;
-        
+
         .infotext {
           text-align: center;
           margin-bottom: 30px;
-          
+
           @include media($medium-screen) {
             padding: 0 13%;
           }
@@ -344,10 +356,10 @@ section.accordion {
 
           }
         }
-        
+
         .hidden {
           display: none;
-          
+
           &.error {
             display: block;
             color: red;
@@ -355,7 +367,7 @@ section.accordion {
         }
       }
     }
-    
+
   }
   .thankyou {
     display: none;
@@ -372,7 +384,7 @@ section.accordion {
       p {
         font-weight: 100;
         text-transform: uppercase;
-        font-size: 30px; 
+        font-size: 30px;
         letter-spacing: 5px;
         color: $white;
 
@@ -383,9 +395,9 @@ section.accordion {
         }
       }
     }
-    
+
   }
-  
+
 }
 section.action {
   @include transition(all 1s);
@@ -393,13 +405,25 @@ section.action {
     display: none;
   }
 }
+.button.website, .button.kickstarter {
+  width: 100%;
 
-//.collapsing {
-//  position: relative;
-//  height: 0;
-//  overflow: hidden;
-//  @include transition(height .35s ease, visibility .35s ease);
-////    @include transition-timing-function(ease);
-////    @include transition-duration(.35s);
-////    @include transition-property(height, visibility);
-//}
+
+  @include media($medium-screen) {
+    width: inherit;
+    min-width: 220px;
+  }
+
+}
+.button.kickstarter {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  img {
+    display: block;
+    height: 18px;
+    margin: 0 auto;
+  }
+  @include media($medium-screen) {
+    margin-bottom: 0;
+  }
+}

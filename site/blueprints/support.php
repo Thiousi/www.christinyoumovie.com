@@ -20,12 +20,12 @@ fields:
     autoselect: first
     types:
         - image
-    width: 3/4    
+    width: 3/4
   fullscreen:
     label: &nbsp;
     type: checkbox
     text: Fullscreen
-    width: 1/4          
+    width: 1/4
   linebuilder:
     type: line
   builder:
@@ -45,20 +45,28 @@ fields:
             label: &nbsp;
             type: checkbox
             text: Verstecken
-            width: 1/4              
+            width: 1/4
           text:
             label: Text
             type: textarea
       supportstatus:
         label: Fortschrittbalken
         entry: >
-          {{text}}.
-        
+          {{text}} <br >{{amountstart}} / {{amountend}}
+
         fields:
           text:
             label: Text
             type: textarea
             help: {%} ist ein Platzhalter, der mit dem aktuellen Prozentsatz ersetzt wird.
+          amountstart:
+            label: Startbetrag
+            type: text
+            width: 1/2
+          amountend:
+            label: Endbetrag
+            type: text
+            width: 1/2
       goodiecontainer:
         label: Spendenoptionen
         entry: >
@@ -69,15 +77,15 @@ fields:
             type: text
           text:
             label: Titel
-            type: textarea            
+            type: textarea
           goodie:
             label: Spendenoptionen
             type: checkbox
             text: Zeige die Spendenoptionen an.
-            default: 1     
-     
+            default: 1
+
   lineitems:
-    type: line  
+    type: line
   donations:
     label: Spendenoptionen
     type: structure
@@ -92,11 +100,11 @@ fields:
         label: Freier Betrag
         type: text
         width: 1/2
-          
+
       description:
         label: Beschreibung
-        type: textarea    
-        
+        type: textarea
+
   socialline:
     type: line
   socialall:
@@ -109,7 +117,7 @@ fields:
     type: checkbox
     text: Zeige den Textabschnitt an.
     default: 1
-    width: 1/4  
+    width: 1/4
   socialicons:
     label: Icons
     type: checkbox
@@ -127,12 +135,12 @@ fields:
     type: checkbox
     text: Zeige die Newsletter-Anmeldung an.
     default: 1
-    width: 1/4  
-     
+    width: 1/4
+
   line2:
-    type: line       
+    type: line
   actionbuttons:
     label: Action-Buttons
     text: Zeige den Share-Button an.
     type: checkbox
-    default: 1 
+    default: 1

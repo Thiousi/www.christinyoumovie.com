@@ -47,7 +47,10 @@ $precent = 100 * $amount / $total;
       <span class="meter start zero" style="width: <?php echo round($precent) ?>%">
       <p id="counter" class="counter<?php if($precent < 25) { echo ' outside';} else { echo ' inside';} ?><?php if($precent < 45) { echo ' outside-m';} ?>"<?php if($precent < 45 ) { echo ' style="left:'.round($precent).'%"'; } ?>>CHF <?php echo number_format(str_replace(' ' , '', $amount), 0, '.', '\'') ?>.–</p>
       </span>
+      <div class="amountrange">
+        <div class="amountstart"><?php echo $section->amountstart()->html() ?></div>
+        <div class="amountend"><?php echo $section->amountend()->html() ?></div>
+      </div>
     </div>
   </div>
 </section>
-
