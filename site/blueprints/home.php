@@ -14,6 +14,16 @@ fields:
   pagetagline:
     label: Tagline
     type:  text
+  trailertext:
+    label: Trailer Button
+    type: text
+    width: 1/2
+    help: Text des Buttons
+  trailerlink:
+    label: &nbsp;
+    type: text
+    width: 1/2
+    help: Youtube ID des Videos
   backgroundimage:
     label: Hintergrundbild
     type: selector
@@ -22,9 +32,26 @@ fields:
     filter: background
     autoselect: first
     types:
-        - image 
+        - image
+  backgroundvideo:
+    label: Hintergrundvideo
+    type: checkbox
+    text: Anzeigen
+    width: 1/5
+  bgvidmp4:
+    label:  &nbsp;
+    type: select
+    options: videos
+    width: 2/5
+    help: .mp4
+  bgvidwebm:
+    label:  &nbsp;
+    type: select
+    options: videos
+    width: 2/5
+    help: .webm
   linebuilder:
-    type: line        
+    type: line
   builder:
     label: Inhalte
     type: builder
@@ -42,7 +69,7 @@ fields:
             label: &nbsp;
             type: checkbox
             text: Verstecken
-            width: 1/4              
+            width: 1/4
           text:
             label: Text
             type: textarea
@@ -57,8 +84,8 @@ fields:
             text: Zeige eine Sammlung der Zitate an.
             default: 1
   lineitems:
-    type: line            
-                
+    type: line
+
   quotes:
     label: Zitate
     type: builder
@@ -77,10 +104,10 @@ fields:
           image:
             label: Bild
             type: select
-            options: images      
-    
+            options: images
+
   socialline:
-    type: line   
+    type: line
   socialall:
     label: Social Media Bereich
     type: checkbox
@@ -91,7 +118,7 @@ fields:
     type: checkbox
     text: Zeige den Textabschnitt an.
     default: 1
-    width: 1/4  
+    width: 1/4
   socialicons:
     label: Icons
     type: checkbox
@@ -109,13 +136,12 @@ fields:
     type: checkbox
     text: Zeige die Newsletter-Anmeldung an.
     default: 1
-    width: 1/4  
-     
+    width: 1/4
+
   line2:
-    type: line       
+    type: line
   actionbuttons:
     label: Action-Buttons
     text: Zeige den Share-Button an.
     type: checkbox
-    default: 1  
-    
+    default: 1

@@ -15,32 +15,32 @@
   -ms-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   opacity: 1;
-  
+
   //@include background-size(cover);
 
 
 
 //    background-attachment: fixed;
-//    background-position: center center; 
-//    background-repeat: no-repeat; 
+//    background-position: center center;
+//    background-repeat: no-repeat;
 //    background-size: cover;
-//    
+//
   .logo {
     position: absolute;
     left: 10px;
     top: 10px;
     line-height: 1;
     z-index: 5;
-    
+
     img {
       width: 187px;
       height: 40px;
     }
-  
+
     @include media($medium-screen) {
       left: 30px;
       top: 30px;
-    } 
+    }
   }
   &:before {
     background: transparent;
@@ -64,7 +64,7 @@
     position: relative;
     text-align: center;
     padding: 0;
-        
+
     .start-scroll {
       @include animation(slide-in-bottom-mobile 1.5s 2s forwards);
 //      @include transition(transform 0.75s ease, opacity 0.75s ease);
@@ -82,7 +82,7 @@
       text-transform: uppercase;
       width: 100%;
       z-index: 101;
-     
+
       .arrow-down {
         width: 50px;
         height: 26px;
@@ -94,12 +94,12 @@
     }
     @include media($medium-screen) {
       height: 300px;
-      
+
       .fixed-height {
         height: 500px;
         margin-top: -100px;
       }
-      
+
       .start-scroll {
         @include animation(slide-in-bottom 1.5s 1.5s forwards);
       }
@@ -109,34 +109,38 @@
     }
   }
   &.fullscreen {
-    #banner { 
+    #banner {
       height: 100vh;
       background-color:black;
-      
+
       .parallax-content {
         position: relative;
         z-index: 9;
         padding: 0 20px;
-        
-        h1, p {
+
+        h1, p, .delay {
           font-weight: 600;
           color: $white;
           text-transform: uppercase;
           opacity: 0;
           position: relative;
         }
-        h1 { 
+        h1 {
           font-size: 60px;
           line-height: 1;
           letter-spacing: 7px;
-          margin-bottom: 15px; 
+          margin-bottom: 15px;
           @include animation(fade-in 1.5s .5s forwards);
         }
         p {
           line-height: 1.1;
           font-size: 25px;
           letter-spacing: 8px;
+          margin-bottom: 30px;
           @include animation(fade-in 1.5s 1s forwards);
+        }
+        .delay {
+          @include animation(fade-in 1.5s 1.5s forwards);
         }
         @include media($medium-screen) {
           h1 {
@@ -157,7 +161,7 @@
   100% {
     opacity: 1;
   }
-} 
+}
 @include keyframes(slide-in-bottom) {
   0% {
     @include transform(translate3d(0,-150px,0) scale(0));
@@ -187,7 +191,7 @@
 
 $parallax-window-height: 350px;
 $parallax-background-height: $parallax-window-height * 2;
- 
+
 .parallax-window {
   @include display(flex);
   @include flex-direction(column);
@@ -224,7 +228,7 @@ section {
     @include outer-container;
     margin: 0 auto;
     padding: 0;
-    
+
     @media (min-width: $medium-screen) and (max-width:$midlarge-screen) {
       padding: 0 6%;
     }
@@ -238,13 +242,13 @@ section {
   &:nth-child(even) {
     background: $bg-gray;
   }
-  
+
   &.supportstatus {
     padding: 60px 20px;
-    
+
   }
 }
- 
+
 .text {
   text-align: center;
   h3 {
@@ -282,7 +286,7 @@ figure.video iframe {
       @include border-radius(50%);
       display: block;
       margin: 30px auto;
-      
+
 //      @include media($medium-screen) {
 //        float: left;
 //      }
@@ -297,7 +301,7 @@ figure.video iframe {
         @include align-content(center);
         @include align-items(center);
         padding: 0 10%;
-        
+
         img, i {
           margin: 0 50px 0 0;
         }
@@ -333,7 +337,7 @@ figure.video iframe {
       }
       .fa-facebook {
         font-size: 32px;
-      }  
+      }
     }
     @include media($medium-screen) {
       letter-spacing: 15px;
@@ -346,18 +350,18 @@ figure.video iframe {
         top:4px;
       }
     }
-    
+
   }
 
   .insta-feed {
     margin-left: -20px;
     margin-right: -20px;
     padding: 0;
-          
+
     .insta-item {
       margin: 0 10px;
     }
-        
+
     @include media($medium-screen) {
       padding: 0 10%;
     }
@@ -366,11 +370,11 @@ figure.video iframe {
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
-    
-//    #mc-notification {    
+
+//    #mc-notification {
 //      div {
 //        margin: 20px 0 0 0;
-//        
+//
 //        @include media($medium-screen) {
 //          margin: 20px 50px 0 50px;
 //        }
@@ -386,13 +390,13 @@ figure.video iframe {
   .members {
     margin-top: 80px;
     @include outer-container();
-    
+
     .member {
       @include span-columns(12);
 //      @include omega(2n);
       text-align: center;
       margin-bottom: 5.88235%;
-      
+
       @media (min-width: 420px) {
         @include span-columns(6);
         @include omega(2n);
@@ -421,8 +425,8 @@ figure.video iframe {
     }
     .form-submit {
       @include display(flex);
-      @include flex-direction(column);  
-            
+      @include flex-direction(column);
+
       p {
         text-align: left;
       }
@@ -463,7 +467,7 @@ figure.video iframe {
       p {
         font-weight: 100;
         text-transform: uppercase;
-        font-size: 30px; 
+        font-size: 30px;
         letter-spacing: 5px;
         color: $white;
 
@@ -482,14 +486,14 @@ figure.video iframe {
   padding-top: 50px;
   padding-bottom: 50px;
   background: #222 !important;
-  
+
   .share-button {
     background-color: none;
     border-color: $white;
     position: relative;
     overflow: hidden;
     @include transition(background .5s);
-    
+
     .text, .hover-icons {
       @include transition-property(transform);
       @include transition-duration(0.5s);
@@ -499,7 +503,7 @@ figure.video iframe {
       display: block;
       font-size: 16px;
       color:$white;
-      
+
       @include media($medium-screen) {
         font-size: 20px;
       }
@@ -510,7 +514,7 @@ figure.video iframe {
       width:100%;
       left:0;
       font-size: 25px;
-       
+
       a {
         padding: 0 10px;
 //        color: $white;
@@ -566,12 +570,12 @@ footer {
   @include transition(opacity 0.5s ease-in-out);
   visibility: visible;
   opacity: 1;
-  
+
   &.hidden {
     visibility: hidden;
     opacity: 0;
   }
-   
+
   .arrow-up  {
     background: url(../images/arrow-up.svg) no-repeat;
     background-size: 22px 11px;
@@ -589,7 +593,7 @@ footer {
     font-size: 0px;
     display: none;
   }
-  
+
   &.bottom {
     position: absolute;
     bottom: 63px;
@@ -637,7 +641,7 @@ footer {
     width: auto;
     height: auto;
     z-index: 0;
-    @include transform(translate(-50%, -50%)); 
+    @include transform(translate(-50%, -50%));
     background-size: cover;
   }
   .bgmobile {
@@ -650,28 +654,28 @@ footer {
   @include outer-container();
   .column {
     margin-bottom: 50px;
-    
+
     @include media($medium-screen) {
       margin-bottom: 0;
     }
   }
   &.columns-2 .column {
     @include span-columns(12);
-    
+
     @include media($medium-screen) {
        @include span-columns(6);
     }
   }
   &.columns-3 .column {
     @include span-columns(12);
-    
+
     @include media($medium-screen) {
        @include span-columns(4);
     }
   }
   &.columns-4 .column {
     @include span-columns(12);
-    
+
     @include media($medium-screen) {
        @include span-columns(3);
     }
@@ -679,7 +683,7 @@ footer {
 }
 
 
-// Uniform Potty 
+// Uniform Potty
 .uniform__potty {
 	position: absolute;
 	top: -9999px;

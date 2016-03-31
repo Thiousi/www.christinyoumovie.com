@@ -5,7 +5,7 @@ $(window).on("resize", function(){
 }).resize();
 
 $(document).ready(function () {
-  
+
   //Parallax Scrolling
   var ypos,parallaxItem1,parallaxItem2,parallaxItem3,parallaxItem4;
   function parallax() {
@@ -23,23 +23,27 @@ $(document).ready(function () {
     if(parallaxItem3 != null) {
       parallaxItem3.style.top = ypos * -.4 + 'px';
     }
-    parallaxItem4 = document.querySelector('[data-parallax="start-arrow"]');
+    parallaxItem4 = document.querySelector('[data-parallax="button"]');
     if(parallaxItem4 != null) {
+      parallaxItem4.style.top = ypos * .3 + 'px';
+    }
+    parallaxItem5 = document.querySelector('[data-parallax="start-arrow"]');
+    if(parallaxItem5 != null) {
       var arrowOpacity = (bannerHeight - (ypos*2)+200) / (bannerHeight)
       if (arrowOpacity > 1) {
-        parallaxItem4.style.opacity = 1 ;
+        parallaxItem5.style.opacity = 1 ;
       }
       if (arrowOpacity < 1 && arrowOpacity > 0) {
-        parallaxItem4.style.opacity = arrowOpacity ;
+        parallaxItem5.style.opacity = arrowOpacity ;
       }
       if (arrowOpacity < 0) {
-        parallaxItem4.style.opacity = 0 ;
+        parallaxItem5.style.opacity = 0 ;
       }
     }
   }
   window.addEventListener('scroll',parallax);
-  
-  // Viewportchecker  
+
+  // Viewportchecker
   $('.start').addClass('zero').viewportChecker({
     classToRemove: 'zero',
     offset: 100
@@ -59,7 +63,7 @@ $(document).ready(function () {
   });
 
   // Remove border on #menu-button, if #banner is out of viewport and make #totop Button visible
-  
+
   $('#banner').viewportChecker({
     offset: 50,
     repeat: true,
@@ -73,7 +77,7 @@ $(document).ready(function () {
       }
     }
   });
-  
+
   // Show / Hide "ToTop"-Button
   $('footer').viewportChecker({
 //    classToAdd: 'test',
@@ -87,7 +91,7 @@ $(document).ready(function () {
       }
     }
   });
-  
+
   // "ToTop"-Button
   $('#totop').click(function () {
     event.preventDefault();
@@ -95,9 +99,9 @@ $(document).ready(function () {
       scrollTop: 0
     },'slow');
   });
-  
-  
-  
+
+
+
   $('.start-scroll').click(function () {
     event.preventDefault();
     $('html, body').animate({
@@ -161,7 +165,7 @@ $(document).ready(function () {
   feed.run();
 
 
-  
+
   $('.quotes-slider').slick({
     autoplay: false,
     dots: true,
@@ -226,7 +230,7 @@ $(document).ready(function () {
         arrows: true
       }
     }]
-    
+
   });
 
   // Ajax für mailchimp Anmeldung
@@ -252,7 +256,7 @@ $(document).ready(function () {
         if (data.result != "success") {
           var message = data.msg.substring(0);
           $('#mc-notification').html('<div class="flash-alert">'+message+'</div>');
-        } 
+        }
 
         else {
           var message = data.msg;
@@ -261,7 +265,7 @@ $(document).ready(function () {
       }
     });
   };
-  
+
   var timelineBlocks = $('.cd-timeline-block'),
     offset = 0.8;
 
@@ -288,10 +292,10 @@ $(document).ready(function () {
       ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
     });
   }
-  
+
   // Hovereffekt für Touchdevice
 
-  $('.touchevents .tab').fastClick(function (e) {    
+  $('.touchevents .tab').fastClick(function (e) {
     if($(this).hasClass('hover_on')) {
       $(this).removeClass('hover_on');
     } else {
@@ -299,8 +303,8 @@ $(document).ready(function () {
       $(this).addClass('hover_on');
     }
     e.preventDefault();
-  }); 
-  
+  });
+
   $('.focus-parent').focus(
     function(){
         $(this).parent('div').addClass('focus');
@@ -308,5 +312,27 @@ $(document).ready(function () {
     function(){
         $(this).parent('div').removeClass('focus');
     });
-  
+
+    // Modal
+      $("#modal-1").on("change", function() {
+        if ($(this).is(":checked")) {
+          $("body").addClass("modal-open");
+          // Get src of iframe and add autoplay=1
+          var iframesrc = document.getElementById("autoplayopen").src;
+          document.getElementById("autoplayopen").src = iframesrc + '&autoplay=1';
+
+        } else {
+          $("body").removeClass("modal-open");
+          $('#autoplayopen')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+          // document.getElementById("autoplayopen").stopVideo();
+        }
+      });
+
+      $(".modal-fade-screen, .modal-close").on("click", function() {
+        $(".modal-state:checked").prop("checked", false).change();
+      });
+
+      $(".modal-inner").on("click", function(e) {
+        e.stopPropagation();
+      });
 });

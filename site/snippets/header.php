@@ -30,7 +30,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo url('assets/favicon/apple-touch-icon-76x76.png') ?>" />
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo url('assets/favicon/apple-touch-icon-152x152.png') ?>" />
 
-  <?php echo css('assets/css/app.css') ?>
+  <?php echo css('assets/css/app.min.css') ?>
 
   <?php echo js('assets/js/modernizr.touch.min.js') ?>
 
@@ -56,4 +56,3 @@
       <div class="logo">
         <a href="<?php echo $site->language()->url() ?>" title="Home"><img src="<?php echo url('assets/images/Logo_Siloam.svg') ?>" alt="<?php echo $site->title()->html() ?>" /></a>
       </div>
-   

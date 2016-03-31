@@ -12,16 +12,16 @@
       <a id="totop" class="totop hidden" href="#"><div class="arrow-up"><span>To top</span></div></a>
     </div><!-- #page-wrapper -->
 </div><!-- .push-container -->
-    
-  
+
+
   <?php echo js('assets/js/jquery-2.1.4.min.js') ?>
   <?php echo js('assets/js/validetta.min.js') ?>
   <?php echo js('assets/js/jquery.viewportchecker.js') ?>
   <?php echo js('assets/js/google.fastbutton.js') ?>
   <?php echo js('assets/js/jquery.inview.js') ?>
   <?php echo js('assets/js/instafeed.min.js') ?>
-  <?php echo js('assets/js/slick.min.js') ?>   
-  <?php echo js('assets/js/script.js') ?>
+  <?php echo js('assets/js/slick.min.js') ?>
+  <?php echo js('assets/js/script.min.js') ?>
 
 </body>
 </html>

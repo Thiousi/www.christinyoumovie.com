@@ -7,10 +7,9 @@ password: >
 language: de
 role: admin
 history:
+  - home
   - support
   - support/support-ch
-  - support/info
-  - home
   - about
 firstname: Jonathan
 lastname: Hess

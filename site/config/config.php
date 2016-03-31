@@ -33,7 +33,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 //Caching
-c::set('cache', true);
+//c::set('cache', true);
 //
 c::set('cache.ignore', array(
   'support',
