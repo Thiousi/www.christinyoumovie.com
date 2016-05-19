@@ -1,4 +1,4 @@
-<section class="quotes">
+<section class="quotes<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner">
     <div class="quotes-slider">
       <?php foreach($page->quotes()->toStructure() as $section): ?>

@@ -49,6 +49,18 @@ fields:
           text:
             label: Text
             type: textarea
+          line:
+            type: line
+          bgcolor:
+            type: checkbox
+            label: Hintergrundfarbe
+            text: grau
+            width: 1/3
+          bgimage:
+            label: Hintergrundbild
+            type: select
+            options: images
+            width: 2/3
       supportstatus:
         label: Fortschrittbalken
         entry: >
@@ -67,6 +79,18 @@ fields:
             label: Endbetrag
             type: text
             width: 1/2
+          line:
+            type: line
+          bgcolor:
+            type: checkbox
+            label: Hintergrundfarbe
+            text: grau
+            width: 1/3
+          bgimage:
+            label: Hintergrundbild
+            type: select
+            options: images
+            width: 2/3
       goodiecontainer:
         label: Spendenoptionen
         entry: >
@@ -83,6 +107,18 @@ fields:
             type: checkbox
             text: Zeige die Spendenoptionen an.
             default: 1
+          line:
+            type: line
+          bgcolor:
+            type: checkbox
+            label: Hintergrundfarbe
+            text: grau
+            width: 1/3
+          bgimage:
+            label: Hintergrundbild
+            type: select
+            options: images
+            width: 2/3
 
   lineitems:
     type: line

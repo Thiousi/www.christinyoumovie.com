@@ -236,16 +236,29 @@ section {
       padding: 0 13%;
     }
   }
-  &:nth-child(odd)  {
-    background: #fff;
-  }
-  &:nth-child(even) {
-    background: $bg-gray;
-  }
+  // &:nth-child(odd)  {
+  //   background: #fff;
+  // }
+  // &:nth-child(even) {
+  //   background: $bg-gray;
+  // }
 
   &.supportstatus {
     padding: 60px 20px;
 
+  }
+
+  &.bg-gray {
+    background-color: $bg-gray;
+  }
+  &.bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150px;
+    @include media($medium-screen) {
+      min-height: 300px;
+    }
   }
 }
 

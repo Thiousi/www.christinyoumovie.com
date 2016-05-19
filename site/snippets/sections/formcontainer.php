@@ -1,4 +1,4 @@
-<section class="contact form">
+<section class="contact form<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner">
     <h2><?php echo $section->title()->html() ?></h2>
     <?php echo $section->text()->kt() ?>
@@ -7,11 +7,11 @@
         <form id="contact-form" method="post">
              <input type="text" name="name" id="name" placeholder="<?php echo l::get('names') ?> *" required/>
              <input type="email" name="_from" id="email" placeholder="<?php echo l::get('email') ?> *" required/>
-             
+
              <input type="tel" name="phone" id="phone" placeholder="<?php echo l::get('phone') ?>"/>
 
              <textarea name="message" id="message" placeholder="<?php echo l::get('message') ?> *" rows="7"></textarea>
-            
+
 
             <label class="uniform__potty" for="website">
                 Please leave this field blank
@@ -19,7 +19,7 @@
             <input type="text" name="website" id="website" class="uniform__potty" />
 
             <input type="hidden" name="_submit" value="<?php echo uniform('contact-form')->token() ?>">
-            <div class="form-submit">              
+            <div class="form-submit">
               <div class="switch">
                 <label class="label-switch">
                   <input type="checkbox" name="_receive_copy" id="receive-copy"/>
@@ -29,7 +29,7 @@
               </div>
               <button id="contact-form-submit" type="submit" class="button submit"><?php echo l::get('submit') ?> <img class="send-arrow" src="<?php echo url('assets/images/send.svg') ?>" alt="<?php echo l::get('submit') ?>" /></button>
             </div>
-            
+
         </form>
 <script type="text/javascript">
 window.onload = function () {
@@ -67,7 +67,7 @@ window.onload = function () {
     });
 };
 </script>
-        
+
       </div>
   </div>
   <div class="feedback-form" style="display:none;">

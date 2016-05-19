@@ -20,14 +20,14 @@ fields:
     autoselect: first
     types:
         - image
-    width: 3/4    
+    width: 3/4
   fullscreen:
     label: &nbsp;
     type: checkbox
     text: Fullscreen
-    width: 1/4          
+    width: 1/4
   linebuilder:
-    type: line      
+    type: line
   builder:
     label: Inhalte
     type: builder
@@ -45,10 +45,22 @@ fields:
             label: &nbsp;
             type: checkbox
             text: Verstecken
-            width: 1/4  
+            width: 1/4
           text:
             label: Text
             type: textarea
+          line:
+            type: line
+          bgcolor:
+            type: checkbox
+            label: Hintergrundfarbe
+            text: grau
+            width: 1/3
+          bgimage:
+            label: Hintergrundbild
+            type: select
+            options: images
+            width: 2/3
       formcontainer:
         label: Kontaktformular
         entry: >
@@ -64,10 +76,22 @@ fields:
             label: Kontaktformular
             type: checkbox
             text: Zeige das Kontaktformular an.
-            default: 1       
-    
+            default: 1
+          line:
+            type: line
+          bgcolor:
+            type: checkbox
+            label: Hintergrundfarbe
+            text: grau
+            width: 1/3
+          bgimage:
+            label: Hintergrundbild
+            type: select
+            options: images
+            width: 2/3
+
   socialline:
-    type: line    
+    type: line
   socialall:
     label: Social Media Bereich
     type: checkbox
@@ -78,7 +102,7 @@ fields:
     type: checkbox
     text: Zeige den Textabschnitt an.
     default: 1
-    width: 1/4  
+    width: 1/4
   socialicons:
     label: Icons
     type: checkbox
@@ -96,13 +120,12 @@ fields:
     type: checkbox
     text: Zeige die Newsletter-Anmeldung an.
     default: 1
-    width: 1/4  
-     
+    width: 1/4
+
   line2:
-    type: line       
+    type: line
   actionbuttons:
     label: Action-Buttons
     text: Zeige den Share-Button an.
     type: checkbox
-    default: 1 
- 
+    default: 1
