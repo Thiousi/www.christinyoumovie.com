@@ -1,0 +1,18 @@
+label: Zitate
+type: builder
+fieldsets:
+  quote:
+    label: Zitat
+    entry: >
+      <div style="float:right;">Bild: {{image}}</div><i>"{{text}}"</i><br />{{citation}}
+    fields:
+      text:
+        label: Zitat
+        type: textarea
+      citation:
+        label: Autor
+        type: text
+      image:
+        label: Bild
+        type: select
+        options: images

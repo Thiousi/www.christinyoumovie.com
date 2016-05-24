@@ -1,0 +1,64 @@
+title: Support Info
+pages: false
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea
+  postfinance:
+    label: PostFinance
+    type: line
+  showpostfinance:
+    text: Zahlungsart "PostFinance" auf der Webseite anzeigen.
+    type: checkbox
+    default: 1
+  titlepostfinance:
+    label: Titel (Email Formular)
+    type: text
+  infopostfinance:
+    label: Infos zu PostFinance
+    type: textarea
+  pspid:
+    label: Name des Händlerkontos bei PostFinance
+    input: text
+  shainsg:
+    label: SHA-IN Signatur
+    input: text
+    width: 2/3
+  currency:
+    label: Währung
+    type: select
+    default: CHF
+    options:
+      CHF: CHF
+      EUR: Euro (€)
+      USD: US Dollar ($)
+    width: 1/3
+  paypal:
+    label : Paypal
+    type: line
+  showpaypal:
+    text: Zahlungsart "Paypal" auf der Webseite anzeigen.
+    type: checkbox
+    default: 1
+  titlepaypal:
+    label: Titel (Email Formular)
+    type: text
+  infopaypal:
+    label: Infos zu Paypal
+    type: textarea
+  banktransfer:
+    label : Banktransfer
+    type: line
+  showbanktransfer:
+    text: Zahlungsart "Banktransfer" auf der Webseite anzeigen.
+    type: checkbox
+    default: 1
+  titlebanktransfer:
+    label: Titel (Email Formular)
+    type: text
+  infobanktransfer:
+    label: Infos zum Banktranfer
+    type: textarea
