@@ -22,15 +22,7 @@ fields:
     type: text
     width: 1/2
     help: Youtube ID des Videos
-  backgroundimage:
-    label: Hintergrundbild
-    type: selector
-    mode: single
-    size:  1
-    filter: background
-    autoselect: first
-    types:
-        - image
+  backgroundimage: backgroundimage
   backgroundvideo:
     label: Hintergrundvideo
     type: checkbox
@@ -50,7 +42,7 @@ fields:
     help: .webm
   linebuilder:
     type: line
-    
+
   builder: builder
 
   lineitems:

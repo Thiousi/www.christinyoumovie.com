@@ -16,7 +16,7 @@ for more information: http://getkirby.com/license
 */
 @include 'license.php';
 
-c::set('panel.stylesheet', 'assets/css/custom-panel.css');
+// c::set('panel.stylesheet', 'assets/css/custom-panel.css');
 /*
 
 
@@ -47,10 +47,24 @@ c::set('date.handler', 'strftime');
 
 c::set('languages', array(
   array(
-    'code'    => 'de',
-    'name'    => 'Deutsch',
+    'code'    => 'en',
+    'name'    => 'English',
     'default' => true,
     'url'     => '/',
+    'locale'   => 'en_US',
+    //    'locale'  => array(
+    //      LC_COLLATE  => 'en_US.utf8',
+    //      LC_MONETARY => 'en_US.utf8',
+    //      LC_NUMERIC  => 'en_US.utf8',
+    //      LC_TIME     => 'en_US.utf8',
+    //      LC_MESSAGES => 'en_US.utf8',
+    //      LC_CTYPE    => 'en_US.utf8'
+    //    ),
+  ),
+  array(
+    'code'    => 'de',
+    'name'    => 'Deutsch',
+    'url'     => '/de',
     'locale'   => 'de_DE',
 //    'locale'  => array(
 //      LC_COLLATE  => 'de_DE.utf8',
@@ -59,20 +73,6 @@ c::set('languages', array(
 //      LC_TIME     => 'de_DE.utf8',
 //      LC_MESSAGES => 'de_DE.utf8',
 //      LC_CTYPE    => 'de_DE.utf8'
-//    ),
-  ),
-  array(
-    'code'    => 'en',
-    'name'    => 'English',
-    'url'     => '/en',
-    'locale'   => 'en_US',
-//    'locale'  => array(
-//      LC_COLLATE  => 'en_US.utf8',
-//      LC_MONETARY => 'en_US.utf8',
-//      LC_NUMERIC  => 'en_US.utf8',
-//      LC_TIME     => 'en_US.utf8',
-//      LC_MESSAGES => 'en_US.utf8',
-//      LC_CTYPE    => 'en_US.utf8'
 //    ),
   ),
 ));

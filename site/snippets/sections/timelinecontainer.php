@@ -4,7 +4,7 @@
     <?php echo $section->text()->kt() ?>
     <div id="cd-timeline">
       <?php foreach($page->timelineelement()->toStructure() as $section): ?>
-        <?php snippet( snippet('sections/' . $section->_fieldset(), array('section' => $section)) ) ?>
+        <?php snippet('sections/'.$section->_fieldset(), array('section' => $section)) ?>
       <?php endforeach ?>
     </div>
   </div>

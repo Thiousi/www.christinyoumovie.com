@@ -399,6 +399,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/parallax.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/parallax.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/parallax.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/parsley.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -8608,6 +8619,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/about\/andi-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2814,
+		"inputAbbreviatedPath": "\/thumbs\/about\/andi-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/andi-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/about\/background_eye-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2685,
+		"inputAbbreviatedPath": "\/thumbs\/about\/background_eye-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/background_eye-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/about\/facebook-cover-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3445,
+		"inputAbbreviatedPath": "\/thumbs\/about\/facebook-cover-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/facebook-cover-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/about\/jonas-640x480.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -8615,6 +8659,17 @@
 		"initialSize": 59610,
 		"inputAbbreviatedPath": "\/thumbs\/about\/jonas-640x480.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/about\/jonas-640x480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/about\/jonas-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2843,
+		"inputAbbreviatedPath": "\/thumbs\/about\/jonas-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/jonas-75x75.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -8630,6 +8685,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/about\/joni-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2849,
+		"inputAbbreviatedPath": "\/thumbs\/about\/joni-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/joni-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/about\/michael-640x480.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -8637,6 +8703,17 @@
 		"initialSize": 42861,
 		"inputAbbreviatedPath": "\/thumbs\/about\/michael-640x480.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/about\/michael-640x480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/about\/michael-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2660,
+		"inputAbbreviatedPath": "\/thumbs\/about\/michael-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/michael-75x75.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -8652,6 +8729,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/about\/nathalie-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2767,
+		"inputAbbreviatedPath": "\/thumbs\/about\/nathalie-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/nathalie-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/about\/phil-640x480.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -8659,6 +8747,17 @@
 		"initialSize": 42849,
 		"inputAbbreviatedPath": "\/thumbs\/about\/phil-640x480.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/about\/phil-640x480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/about\/phil-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2532,
+		"inputAbbreviatedPath": "\/thumbs\/about\/phil-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/about\/phil-75x75.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -9873,6 +9972,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/home\/andres_bisonni-48x48.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1580,
+		"inputAbbreviatedPath": "\/thumbs\/home\/andres_bisonni-48x48.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/home\/andres_bisonni-48x48.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/home\/andres_bisonni-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -9906,6 +10016,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/home\/facebook-cover-48x48.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1769,
+		"inputAbbreviatedPath": "\/thumbs\/home\/facebook-cover-48x48.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/home\/facebook-cover-48x48.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/home\/facebook-cover-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -9928,6 +10049,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/home\/matthias_kuhn-48x48.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1592,
+		"inputAbbreviatedPath": "\/thumbs\/home\/matthias_kuhn-48x48.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/home\/matthias_kuhn-48x48.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/home\/matthias_kuhn-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -9946,6 +10078,17 @@
 		"initialSize": 30708,
 		"inputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-400x400.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-400x400.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/home\/robby_dawkins-48x48.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1644,
+		"inputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-48x48.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-48x48.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

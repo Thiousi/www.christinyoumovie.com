@@ -10,14 +10,7 @@ fields:
     label: Seitentitel
     type:  text
   backgroundimage:
-    label: Hintergrundbild
-    type: selector
-    mode: single
-    size:  1
-    filter: background
-    autoselect: first
-    types:
-        - image
+    extends: backgroundimage
     width: 3/4
   fullscreen:
     label: &nbsp;

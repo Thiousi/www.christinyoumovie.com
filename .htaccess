@@ -1,4 +1,9 @@
+# For maintainance uncomment:
+#DirectoryIndex index.html index.php
+
 # Kirby .htaccess
+
+AddType image/svg+xml .svg .svgz
 
 # rewrite rules
 <IfModule mod_rewrite.c>

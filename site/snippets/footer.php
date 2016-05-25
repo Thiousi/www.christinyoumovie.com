@@ -15,6 +15,7 @@
 
 
   <?php echo js('assets/js/jquery-2.1.4.min.js') ?>
+  <?php echo js('assets/js/parallax.min.js') ?>
   <?php echo js('assets/js/validetta.min.js') ?>
   <?php echo js('assets/js/jquery.viewportchecker.js') ?>
   <?php echo js('assets/js/google.fastbutton.js') ?>

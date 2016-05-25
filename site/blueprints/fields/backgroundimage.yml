@@ -1,0 +1,8 @@
+label: Hintergrundbild
+type: select
+options: query
+query:
+  page: /
+  fetch: images
+  text: '{{filename}}'
+  value: '{{filename}}'

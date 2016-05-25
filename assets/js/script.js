@@ -6,6 +6,17 @@ $(window).on("resize", function(){
 
 $(document).ready(function () {
 
+  // Parallax Section height
+
+  $(function(){
+    $(".bg-image").each(function(i,obj){
+        var height = $(this).find('.inner').outerHeight();
+        $(this).find('.parallax-section').css({'min-height': height+'px'});
+        console.log(height);
+    });
+    //console.log(totalHeight);
+});
+
   //Parallax Scrolling
   var ypos,parallaxItem1,parallaxItem2,parallaxItem3,parallaxItem4;
   function parallax() {
@@ -187,7 +198,7 @@ $(document).ready(function () {
           infinite: true,
           speed: 300,
           slidesToShow: 1,
-          adaptiveHeight: true,
+          adaptiveHeight: false,
           arrows: true
         }
     }
