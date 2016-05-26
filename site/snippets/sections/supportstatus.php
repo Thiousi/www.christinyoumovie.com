@@ -40,7 +40,7 @@ $precent = 100 * $amount / $total;
 
 ?>
 
- <section class="supportstatus">
+ <section class="supportstatus<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner test">
     <?php echo str_replace('{%}', '<span class="meter-percentage"><strong>' . round($precent) . '%</strong></span>', $section->text()->kirbytext()) ?>
     <div class="progress-bar-indication">
