@@ -8,8 +8,5 @@ language: de
 role: admin
 history:
   - home
-  - support
-  - support/support-ch
-  - about
 firstname: Jonathan
 lastname: Hess
