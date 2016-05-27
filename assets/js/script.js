@@ -53,6 +53,10 @@ $(document).ready(function () {
     }
   }
   window.addEventListener('scroll',parallax);
+  // Parallax Sections
+  // $('.parallax-section').scrolly({
+  //   bgParallax: true
+  // });
 
   // Viewportchecker
   $('.start').addClass('zero').viewportChecker({

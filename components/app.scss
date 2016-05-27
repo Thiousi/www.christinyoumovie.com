@@ -254,22 +254,10 @@ section {
   &.bg-image {
       overflow: hidden;
       padding: 0;
-    .parallax-section {
-    }
-    // .section-background {
-    //
-    //   width: 100%;
-    //   height: 100%;
-    //   position: relative;
-    //   top:0;
-    //   left: 0;
-    //   z-index: -1;
-    //   display: block;
-    //   img {
-    //     width: 100%;
-    //     display: block;
-    //   }
-    //
+    // .parallax-section {
+    //   background-repeat: no-repeat;
+    //   background-position: center;
+    //   background-attachment: fixed;
     // }
     .outer {
       @include display(flex);
