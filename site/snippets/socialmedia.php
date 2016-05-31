@@ -1,5 +1,5 @@
 <?php if($page->socialall()->bool()): ?>
- <section class="text social">
+ <section class="text social<?php e($page->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner">
     <?php if($page->socialtextline()->bool()): ?>
     <div class="social-text">
@@ -20,7 +20,7 @@
     <div style="clear:both;"></div>
     <?php if($page->mailchimp()->bool()): ?>
        <?php snippet('mailchimp') ?>
-    <?php endif ?>        
+    <?php endif ?>
   </div>
 </section>
 <?php endif ?>

@@ -8495,6 +8495,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/site\/snippets\/sections\/supportstatus_alt2.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/site\/snippets\/sections\/supportstatus_alt2.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/site\/snippets\/sections\/timeline.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -10016,17 +10025,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/thumbs\/home\/andres_bisonni-48x48.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1580,
-		"inputAbbreviatedPath": "\/thumbs\/home\/andres_bisonni-48x48.jpg",
-		"outputAbbreviatedPath": "\/thumbs\/home\/andres_bisonni-48x48.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/thumbs\/home\/andres_bisonni-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -10038,17 +10036,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/thumbs\/home\/background_eye-48x48.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1490,
-		"inputAbbreviatedPath": "\/thumbs\/home\/background_eye-48x48.jpg",
-		"outputAbbreviatedPath": "\/thumbs\/home\/background_eye-48x48.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/thumbs\/home\/background_eye-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -10056,17 +10043,6 @@
 		"initialSize": 2685,
 		"inputAbbreviatedPath": "\/thumbs\/home\/background_eye-75x75.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/home\/background_eye-75x75.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/thumbs\/home\/facebook-cover-48x48.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1769,
-		"inputAbbreviatedPath": "\/thumbs\/home\/facebook-cover-48x48.jpg",
-		"outputAbbreviatedPath": "\/thumbs\/home\/facebook-cover-48x48.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -10093,17 +10069,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/thumbs\/home\/matthias_kuhn-48x48.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1592,
-		"inputAbbreviatedPath": "\/thumbs\/home\/matthias_kuhn-48x48.jpg",
-		"outputAbbreviatedPath": "\/thumbs\/home\/matthias_kuhn-48x48.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/thumbs\/home\/matthias_kuhn-75x75.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -10122,17 +10087,6 @@
 		"initialSize": 30708,
 		"inputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-400x400.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-400x400.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/thumbs\/home\/robby_dawkins-48x48.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1644,
-		"inputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-48x48.jpg",
-		"outputAbbreviatedPath": "\/thumbs\/home\/robby_dawkins-48x48.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

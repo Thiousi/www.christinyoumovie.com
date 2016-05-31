@@ -17,23 +17,65 @@
   $modal-image-width: $modal-image-height;
   $modal-trigger-image-width: 300px;
 
+  margin-top: 30px;
+
+  @include media($medium-screen) {
+    margin-top: 80px;
+    @include display(flex);
+    @include justify-content(center);
+  }
+
   label {
     cursor: pointer;
     margin-bottom: 0;
   }
 
-  label img {
-    border-radius: $modal-trigger-image-width / 2;
-    display: block;
-    max-width: $modal-trigger-image-width;
-  }
+  // label img {
+  //   border-radius: $modal-trigger-image-width / 2;
+  //   display: block;
+  //   max-width: $modal-trigger-image-width;
+  // }
 
   .modal-state {
     display: none;
   }
 
-  .modal-trigger {
-    padding: 0.8em 1em;
+  .button {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: white;
+    border:none !important;
+    letter-spacing: 1.19px;
+    color: black !important;
+    font-size: 15px !important;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+    line-height: 20px;
+
+    img {
+      display: block;
+      float: left;
+      vertical-align: middle;;
+      margin-right: 10px;
+      margin-top: -3px;
+      margin-bottom: -12px;
+      height: 25px;
+      width: 25px;
+    }
+    &:hover {
+      background-color: #e8e8e8 !important;
+    }
+    @include media($medium-screen) {
+      padding: 20px;
+      margin-bottom: 0;
+      margin-right: 20px;
+      font-size: 20px !important;
+      img {
+        height: 36px;
+        width: 36px;
+        margin-top: -8px;
+        margin-bottom: -12px;
+      }
+    }
   }
 
   .modal-fade-screen { // overlay

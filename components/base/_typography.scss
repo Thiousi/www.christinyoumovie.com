@@ -22,26 +22,25 @@ h6 {
 h1 {
   font-weight: 100;
   text-transform: uppercase;
-  font-size: 30px; 
+  font-size: 30px;
   letter-spacing: 5px;
   color: $white;
-  
-   
+
+
   @include media($medium-screen) {
     font-size: 70px;
     letter-spacing: 5px;
   }
 }
 h2 {
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 30px; 
+  font-size: 30px;
   letter-spacing: 1.5px;
   margin-bottom: 40px;
-  
+
   @include media($medium-screen) {
     font-size: 40px;
-    letter-spacing: 2px;
   }
 }
 h3 {
@@ -49,7 +48,7 @@ h3 {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 1.8px;
-  
+
   @include media($medium-screen) {
     font-size: 20px;
     letter-spacing: 1.8px;
@@ -60,15 +59,15 @@ p {
   margin: 0 0 $small-spacing;
   font-weight: 300;
   text-align: center;
-  
+
   &.lead {
     font-size:20px;
     letter-spacing: 1px;
     font-weight: 100;
     margin-bottom: 20px;
-    
+
     @include media($medium-screen) {
-      font-size: 22px; 
+      font-size: 22px;
     }
   }
 }
@@ -80,7 +79,7 @@ blockquote {
     font-size: 25px;
     letter-spacing: 1px;
     font-weight: 100;
-    
+
 
 //    &:before {
 //      content: '«';
@@ -89,7 +88,7 @@ blockquote {
 //      content: '»';
 //    }
   }
-  
+
   cite {
     display: block;
     font-style: normal;
@@ -97,11 +96,11 @@ blockquote {
     font-weight: 300;
     margin-top: 10px;
   }
-    
+
   @include media($medium-screen) {
     font-size: 30px;
     letter-spacing: 1.2px;
-  }  
+  }
 }
 
 a {
