@@ -7,18 +7,18 @@ $(window).on("resize", function(){
 $(document).ready(function () {
 
   // Parallax Section height
-  $('div[data-type="background"]').each(function(){
-      var $bgobj = $(this); // assigning the object
-
-      $(window).scroll(function() {
-          var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-          // Put together our final background position
-          var coords = '50% '+ yPos + 'px';
-
-          // Move the background
-          $bgobj.css({ backgroundPosition: coords });
-      });
-  });
+  // $('div[data-type="background"]').each(function(){
+  //     var $bgobj = $(this); // assigning the object
+  //
+  //     $(window).scroll(function() {
+  //         var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+  //         // Put together our final background position
+  //         var coords = '50% '+ yPos + 'px';
+  //
+  //         // Move the background
+  //         $bgobj.css({ backgroundPosition: coords });
+  //     });
+  // });
 
   // $(window).Scrollax();
 
@@ -72,11 +72,6 @@ $(document).ready(function () {
   //   bgParallax: true
   // });
 
-  // Viewportchecker
-  $('.start').addClass('zero').viewportChecker({
-    classToRemove: 'zero',
-    offset: 100
-  });
   // Navigation
   $('#menu-button').fastClick(function (e) {
     $('#menu-button').toggleClass('bt-menu-open');

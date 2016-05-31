@@ -1,4 +1,4 @@
-$progress-meter-color: #90DD71;
+$progress-meter-color: #EB1378;
 $progress-background: #EFEFEF;
 $progress-animation-duration: 0.7s;
 $progress-color: white;
@@ -55,7 +55,7 @@ $progress-color: white;
 
     &.outside, &.outside-m {
       position:absolute;
-      color:#888;
+      color:$progress-meter-color;
       padding-left:20px;
     }
     @include media($medium-screen) {
