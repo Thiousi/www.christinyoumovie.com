@@ -4,10 +4,10 @@
      var raisedAmount = 60076;
      var contributors = 25;
      var percentage = Math.round(100 * raisedAmount / totalAmount);
-     document.getElementById('counter').innerHTML = '$ '+ raisedAmount;
+     document.getElementById('counter').innerHTML = '$ '+ numberWithCommas(raisedAmount);
      document.getElementById('percentbar').style.width = percentage + '%';
      document.getElementById('percenttext').innerHTML = '<strong>' + percentage + '%</strong>';
-     document.getElementById('amountend').innerHTML = '$ '+ totalAmount;
+     document.getElementById('amountend').innerHTML = '$ '+ numberWithCommas(totalAmount);
      if(percentage < 25) {
        $('#counter').addClass('outside');
      } else {
@@ -33,9 +33,14 @@
   };
 
   function numberWithCommas(x) {
+    <?php if($site->language()->code() == 'en'): ?>
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    <?php else: ?>
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'");
+    <?php endif; ?>
   }
 </script>
+
  <section class="supportstatus<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner test">
     <?php echo str_replace('{%}', '<span id="percenttext" class="meter-percentage"></span>', $section->text()->kirbytext()) ?>
@@ -44,7 +49,7 @@
       <p id="counter" class="counter"></p>
       </span>
       <div class="amountrange">
-        <div id="amountstart" class="amountstart"><?php echo $section->amountstart()->html() ?></div>
+        <div id="amountstart" class="amountstart">$ 0</div>
         <div id="amountend" class="amountend"></div>
       </div>
     </div>

@@ -465,6 +465,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/js\/sha1.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/sha1.js",
+		"outputAbbreviatedPath": "\/assets\/js\/min\/sha1-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/assets\/js\/slick.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -4122,6 +4133,17 @@
 		"initialSize": 295284,
 		"inputAbbreviatedPath": "\/content\/2-the-movie\/facebook-cover.jpg",
 		"outputAbbreviatedPath": "\/content\/2-the-movie\/facebook-cover.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/3-support\/00180040_600px.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.55574e+06,
+		"inputAbbreviatedPath": "\/content\/3-support\/00180040_600px.jpg",
+		"outputAbbreviatedPath": "\/content\/3-support\/00180040_600px.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -11286,6 +11308,17 @@
 		"initialSize": 17671,
 		"inputAbbreviatedPath": "\/thumbs\/stock-photo-70719815-prisoner-08c9e044d664e207120c6295b845b6da.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/stock-photo-70719815-prisoner-08c9e044d664e207120c6295b845b6da.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/support\/00180040_600px-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2801,
+		"inputAbbreviatedPath": "\/thumbs\/support\/00180040_600px-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/support\/00180040_600px-75x75.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

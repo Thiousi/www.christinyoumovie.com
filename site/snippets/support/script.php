@@ -1,7 +1,7 @@
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>     
+<script src="<?php echo url('assets/js/sha1.js') ?>"></script>     
 <script type="text/javascript">
-window.onload = function () {  
-  
+window.onload = function () {
+
   //  Accordion
   function close_accordion_section() {
     $('.accordion .trigger').removeClass('active');
@@ -19,16 +19,16 @@ window.onload = function () {
     // Open / close accordion .content
     $('.accordion .content-2').slideUp(300).removeClass('open');
     $('.thankyou').slideUp(300).removeClass('open');
-    
+
     if($(this).is('.active')) {
       close_accordion_section();
-      $('.thankyou').slideUp(300).removeClass('open');     
+      $('.thankyou').slideUp(300).removeClass('open');
     }else {
       if($('.trigger').hasClass('active')){
         //If any of the .trigger elements hasClass active it opens and scrolls down with a delay
         close_accordion_section();
         // Open up the hidden content panel
-        $('.accordion ' + currentAttrValue).delay(300).slideDown(300).addClass('open'); 
+        $('.accordion ' + currentAttrValue).delay(300).slideDown(300).addClass('open');
         // Add active class to section title
         $(this).addClass('active');
         setTimeout(function (){
@@ -39,7 +39,7 @@ window.onload = function () {
       }else{
         close_accordion_section();
         // Open up the hidden content panel
-        $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');       
+        $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
         // Add active class to section title
         $(this).addClass('active');
         $('html, body').animate({
@@ -48,7 +48,7 @@ window.onload = function () {
       }
     }
     a.preventDefault();
-    
+
   });
   // Open / Close accordion .content-2
   $('.trigger-2').click(function(e) {
@@ -65,7 +65,7 @@ window.onload = function () {
         //If any of the .trigger elements hasClass active it opens and scrolls down with a delay
         close_accordion_section_2();
         // Open up the hidden content panel
-        $('.accordion ' + currentAttrValue).delay(300).slideDown(300).addClass('open'); 
+        $('.accordion ' + currentAttrValue).delay(300).slideDown(300).addClass('open');
         // Add active class to section title
         $(this).addClass('active');
         setTimeout(function (){
@@ -76,7 +76,7 @@ window.onload = function () {
       }else{
         close_accordion_section_2();
         // Open up the hidden content panel
-        $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');       
+        $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
         // Add active class to section title
         $(this).addClass('active');
         $('html, body').animate({
@@ -87,21 +87,21 @@ window.onload = function () {
     e.preventDefault();
   });
 
-  
+
   // <!-- Form submission handler to GoogleDocs -->
 
-  
-  $('.trigger').click(function(a) {  
+
+  $('.trigger').click(function(a) {
     // Variable to hold request
     var request;
     var id = $(this).attr('data-id');
     // Bind to the submit event of our form
-    
+
       // Open / Close accordion .content-2
       $('.trigger-2').click(function() {
 
         var paymentOption = $(this).attr('data-option');
-        
+
         $('#postfinance-form-' + id + ', #banktransfer-form-' + id + ', #paypal-form-' + id).validetta({
           showErrorMessages : false,
           realTime: true,
@@ -110,11 +110,11 @@ window.onload = function () {
             //event.preventDefault(); // Will prevent the submission of the form
             $('input').removeClass('erroneous');
             // Multiplay amount with 100
-            
+
             if (paymentOption == 'postfinance') {
               // Some mods for Postfinance
               document.getElementById('pf-amount-' + id).value = document.getElementById('pf-amountfr-' + id).value * 100;
-              
+
               // Create SHA-1 Hash
               var sha1hash = [
                 { type: 'ACCEPTURL', value: document.getElementById('pf-accepturl-' + id).value },
@@ -134,7 +134,7 @@ window.onload = function () {
               var hash = CryptoJS.SHA1(sha1hash);
               var a1 = hash.toString(CryptoJS.enc.Hex).toUpperCase();
               document.getElementById('pf-shasign-' + id).value = a1;
-              
+
             } else if ( paymentOption =='paypal' ) {
               // Copy Values to other fields, specifed for Paypal
               document.getElementById('pp-amountpp-' + id).value = document.getElementById('pp-amountfr-' + id).value + '.00';
@@ -198,7 +198,7 @@ window.onload = function () {
           }
 
         });
-    
+
       });
     });
 }
