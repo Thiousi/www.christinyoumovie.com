@@ -7,12 +7,26 @@ $(window).on("resize", function(){
 $(document).ready(function () {
 
   // Parallax Section height
+  $('div[data-type="background"]').each(function(){
+      var $bgobj = $(this); // assigning the object
+
+      $(window).scroll(function() {
+          var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+          // Put together our final background position
+          var coords = '50% '+ yPos + 'px';
+
+          // Move the background
+          $bgobj.css({ backgroundPosition: coords });
+      });
+  });
+
+  // $(window).Scrollax();
 
   $(function(){
-    $(".bg-image").each(function(i,obj){
+    $(".bg-image").each(function(){
         var height = $(this).find('.inner').outerHeight();
         $(this).find('.parallax-section').css({'min-height': height+'px'});
-        console.log(height);
+        // console.log(height);
     });
     //console.log(totalHeight);
 });

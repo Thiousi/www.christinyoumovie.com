@@ -1,5 +1,5 @@
 <?php if($section->bgimage()->isNotEmpty()): ?>
-  <section class="<?php echo $page->slug() ?> text<?php e($section->bgimage()->isNotEmpty(),' bg-image') ?>">
+  <section class="<?php echo $page->slug() ?> text<?php e($section->bgimage()->isNotEmpty(),' bg-image') ?>"<?php e($section->bgimage()->isNotEmpty(),' data-scrollax-parent="true"') ?>>
     <?php $sectionId = 'parallax-' . rand(10000,99999) ?>
     <?php if($section->bgheight()->isNotEmpty()): ?>
     <style>
@@ -13,7 +13,8 @@
       }
     </style>
     <?php endif; ?>
-    <div class="parallax-section" data-parallax="scroll" data-image-src="<?php echo $section->bgimage()->toFile()->url() ?>" data-speed="0.5" id="<?php echo $sectionId ?>"></div>
+    <div data-type="background" data-speed="-10" data-scrollax="properties: { translateY: '50%' }" class="parallax-section" id="<?php echo $sectionId ?>" style="background-image:url('<?php echo $section->bgimage()->toFile()->url() ?>');">
+    </div>
     <div class="outer">
       <div class="inner">
         <?php if(!$section->hidetitle()->bool()): ?><h2><?php echo $section->title()->html() ?></h2><?php endif ?>

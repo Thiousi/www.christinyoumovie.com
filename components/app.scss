@@ -89,15 +89,15 @@
       }
     }
     .fixed-height {
-      height: 400px;
-      margin-top: -100px;
+      // height: 400px;
+      // margin-top: -100px;
     }
     @include media($medium-screen) {
       height: 300px;
 
       .fixed-height {
-        height: 500px;
-        margin-top: -100px;
+        // height: 500px;
+        // margin-top: -100px;
       }
 
       .start-scroll {
@@ -252,13 +252,23 @@ section {
     background-color: $bg-gray;
   }
   &.bg-image {
+      background-color: red;
       overflow: hidden;
       padding: 0;
-    // .parallax-section {
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-attachment: fixed;
-    // }
+      .parallax-section {
+        background-position: center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+          min-height: 1000px;
+        img {
+          position: absolute;
+          min-width: 100%;
+          min-height: 100%;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+      }
     .outer {
       @include display(flex);
       @include align-items(center);
