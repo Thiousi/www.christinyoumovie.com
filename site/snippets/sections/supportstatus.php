@@ -22,7 +22,7 @@
        classToRemove: 'zero',
        offset: 100
      });
-    // $.getJSON("https://api.indiegogo.com/1/campaigns/[YOUR CAMPAIGN ID].json?api_token=[YOUR API TOKEN]", function(gogodata) {
+    // $.getJSON("https://api.indiegogo.com/1/campaigns/[YOUR CAMPAIGN ID].json?api_token=a3a779b95c1f3c4e6ae3c031ac2da1a864969516007b1b5ecd1799caeeb86b9f", function(gogodata) {
     //   var $totalAmount = numberWithCommas(gogodata.response.goal);
     //   var $raisedAmount = numberWithCommas(gogodata.response.collected_funds);
     //   var $contributors = numberWithCommas(gogodata.response.contributions_count);
@@ -31,7 +31,6 @@
     //   $("#igg-contributions").prepend('<h2>' + numberWithCommas(gogodata.response.contributions_count) + '</h2>');
     // });
   };
-
   function numberWithCommas(x) {
     <?php if($site->language()->code() == 'en'): ?>
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
