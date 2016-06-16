@@ -137,7 +137,7 @@ $(document).ready(function () {
     get: 'user',
 //    tagName: 'dievierpunkte',
     userId: 2209505137,
-    accessToken: '2209505137.467ede5.9be4ea637f6f424fb778532900d53ff6',
+    accessToken: '2209505137.1677ed0.c743998f461b4526b3495e9149a57f43',
 //    clientId: '16445d9a5cdd4e9680ba05b7cf7f5739',
     template: '<div class="insta-item"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>',
     limit: '10',
