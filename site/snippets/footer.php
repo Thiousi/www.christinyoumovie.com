@@ -21,9 +21,8 @@
   <?php echo js('assets/js/slick.min.js') ?>
   <?php echo js('assets/js/script.min.js') ?>
 
-  <?php if($page->actionbuttons()->bool()) : ?>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5762bd511c2fc4b9"></script>
-  <?php endif ?>
+<?php if($page->actionbuttons()->bool()) : ?>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5762bd511c2fc4b9"></script>
+<?php endif ?>
 </body>
 </html>
