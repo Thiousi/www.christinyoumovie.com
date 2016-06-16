@@ -1,11 +1,10 @@
 .button, .button-nohover {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
-  background-color: transparent;
+  background-color: $darker-gray;
 //  border-radius: $base-border-radius;
   border: none;
-  border: $base-border;
-  color: $standard-gray;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -19,7 +18,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  box-shadow: none;
+  box-shadow: 0px 2px 4px 0px #000000;
   outline: none;
 }
 .button {

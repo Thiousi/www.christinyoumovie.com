@@ -136,7 +136,7 @@
         p {
           font-weight: 300;
           line-height: 1.1;
-          font-size: 15px;
+          font-size: 25px;
           letter-spacing: 8px;
           margin-bottom: 30px;
           @include animation(fade-in 1.5s 1s forwards);
@@ -149,7 +149,7 @@
             font-size: 100px;
           }
           p {
-            font-size: 30px;
+            font-size: 75px;
           }
         }
       }
@@ -254,7 +254,7 @@ section {
     background-color: $bg-gray;
   }
   &.bg-image {
-      
+
       overflow: hidden;
       padding: 0;
       .parallax-section {
@@ -410,6 +410,9 @@ figure.video iframe {
     margin-right: auto;
     margin-left: auto;
 
+    button {
+      box-shadow: none;
+    }
 //    #mc-notification {
 //      div {
 //        margin: 20px 0 0 0;
