@@ -20,6 +20,11 @@
   white-space: nowrap;
   box-shadow: 0px 2px 4px 0px #000000;
   outline: none;
+
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .button {
   &:hover {
