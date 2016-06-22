@@ -199,7 +199,7 @@ section.accordion {
 
   .content {
     display: none;
-    background: $white;
+    background-color: $bg-gray;
     margin: 0 -20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -223,7 +223,6 @@ section.accordion {
     }
     .payment-options {
       text-align: center;
-      background-color: $bg-gray;
 
       .btn-group {
         @include outer-container(400px);
@@ -318,7 +317,7 @@ section.accordion {
 
 
     .content-2 {
-      // background: $bg-gray;
+      background: $white;
       margin: 0 -20px;
       padding-left: 20px;
       padding-right: 20px;
@@ -357,6 +356,7 @@ section.accordion {
         input {
           margin-bottom: 20px;
         }
+
         .grid-container {
           @include display(flex);
           .plz {
