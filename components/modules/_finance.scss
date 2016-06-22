@@ -223,6 +223,7 @@ section.accordion {
     }
     .payment-options {
       text-align: center;
+      background-color: $bg-gray;
 
       .btn-group {
         @include outer-container(400px);
@@ -232,6 +233,13 @@ section.accordion {
           margin-bottom: 20px;
           &:last-child {
             margin-bottom: 0;
+          }
+
+          .button-nohover {
+            background-color: white;
+            box-shadow: none;
+            border: 2px solid $standard-gray;
+            color: $standard-gray;
           }
           .paypal-btn {
             padding: 0;
@@ -251,6 +259,9 @@ section.accordion {
                   margin-top: 5px;
                   height: 18px;
                 }
+              }
+              button {
+                box-shadow: none;
               }
             }
             .no-touchevents & fieldset:hover, &.active fieldset {
@@ -307,7 +318,7 @@ section.accordion {
 
 
     .content-2 {
-      background: $bg-gray;
+      // background: $bg-gray;
       margin: 0 -20px;
       padding-left: 20px;
       padding-right: 20px;
