@@ -13,13 +13,11 @@
   <meta property ="og:url" content="<?php echo url($page->slug()) ?>">
   <meta property ="og:description" content="<?php echo $site->facebooktext()->html() ?>">
   <meta property ="og:image" content="<?php
-    if($page->hasImages()) {
-      if($page->images()->sortBy('sort', 'asc')) {
-        echo $page->images()->sortBy('sort', 'asc')->first()->url();
-      } else {
-        $page->images()->first()->url();
-        }
-    }
+    if($image = $site->image('facebook.jpg')):
+      echo $image->url();
+    else:
+      echo $site->image()->url();
+    endif;
   ?>">
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo url('assets/favicon/apple-touch-icon-57x57.png') ?>" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo url('assets/favicon/apple-touch-icon-114x114.png') ?>" />
