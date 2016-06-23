@@ -19,6 +19,16 @@
   <?php echo js('assets/js/jquery.inview.js') ?>
   <?php echo js('assets/js/instafeed.min.js') ?>
   <?php echo js('assets/js/slick.min.js') ?>
+  <?php echo js('assets/js/jquery.youtubebackground.js') ?>
+  <?php if($page->backgroundvideo()->isNotEmpty()): ?>
+    <script type="text/javascript" language="javascript">
+      $('#bg-video').YTPlayer({
+        fitToBackground: true,
+        pauseOnScroll: true,
+        videoId: '<?php echo $page->backgroundvideoid()->html() ?>'
+      });
+    </script>
+  <?php endif; ?>
   <?php echo js('assets/js/script.min.js') ?>
 
 <?php if($page->actionbuttons()->bool()) : ?>

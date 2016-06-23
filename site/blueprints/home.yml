@@ -37,18 +37,10 @@ fields:
     type: checkbox
     text: Anzeigen
     width: 1/5
-  bgvidmp4:
-    label:  &nbsp;
-    type: select
-    options: videos
-    width: 2/5
-    help: .mp4
-  bgvidwebm:
-    label:  &nbsp;
-    type: select
-    options: videos
-    width: 2/5
-    help: .webm
+  backgroundvideoid:
+    label:  Youtube ID
+    type: text
+    width: 4/5
   linebuilder:
     type: line
 

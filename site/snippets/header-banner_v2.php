@@ -25,8 +25,15 @@
     <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');"></div>
     <?php else: ?>
     <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');">
-      <div id="bg-video" class="hide-mobile"></div>
-      <div class="video-overlay hide-mobile"></div>
+      <video muted autoplay loop poster="<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>" id="bgvideo">
+        <?php if($page->bgvidwebm()->isNotEmpty()): ?>
+        <source src="<?php echo $page->bgvidwebm()->toFile()->url() ?>" type="video/webm">
+        <?php endif;?>
+        <?php if($page->bgvidmp4()->isNotEmpty()): ?>
+        <source src="<?php echo $page->bgvidmp4()->toFile()->url() ?>" type="video/mp4">
+        <?php endif;?>
+      </video>
+      <div class="video-overlay"></div>
     </div>
     <?php endif ?>
   </div>
