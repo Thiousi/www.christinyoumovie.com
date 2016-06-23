@@ -113,9 +113,9 @@ fieldsets:
         type: select
         options: images
   supportstatus:
-    label: Fortschrittbalken (nur Support Seite)
+    label: Fortschrittbalken
     entry: >
-      {{text}} <br >{{amountstart}} / {{amountend}}
+      <b>Supportstatus</b><br>{{text}} <br >(Verstecken: {{hide}})
 
     fields:
       hide:
