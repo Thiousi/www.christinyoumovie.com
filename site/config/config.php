@@ -88,9 +88,9 @@ c::set('sitemap.important', array('christ-in-you', 'support'));
 // Route for Kickstarter
 c::set('routes', array(
   array(
-    'pattern' => 'ks',
+    'pattern' => 'indiegogo',
     'action' => function () {
-      header::redirect('http://www.kickstarter.com', 301);
+      header::redirect('https://www.indiegogo.com/projects/christ-in-you-the-movie', 301);
     }
   ),
 ));

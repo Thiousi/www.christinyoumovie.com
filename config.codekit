@@ -4368,6 +4368,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/content\/facebook.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 250536,
+		"inputAbbreviatedPath": "\/content\/facebook.jpg",
+		"outputAbbreviatedPath": "\/content\/facebook.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/google5a7a37b24a6b4097.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -10155,6 +10166,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/facebook-400x266.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20404,
+		"inputAbbreviatedPath": "\/thumbs\/facebook-400x266.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/facebook-400x266.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/facebook-414d63eff10eda9e4258e4c0716e010d.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -10177,6 +10199,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/thumbs\/facebook-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2637,
+		"inputAbbreviatedPath": "\/thumbs\/facebook-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/facebook-75x75.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/thumbs\/facebook-8cd9a378b591cffc5a5512bf02c0ea5f.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -10195,6 +10228,28 @@
 		"initialSize": 1769,
 		"inputAbbreviatedPath": "\/thumbs\/facebook-cover-a4c0b2762869c7ba073aa94b7196c7d7.jpg",
 		"outputAbbreviatedPath": "\/thumbs\/facebook-cover-a4c0b2762869c7ba073aa94b7196c7d7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/facebook-cover-indiegogo-400x266.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20404,
+		"inputAbbreviatedPath": "\/thumbs\/facebook-cover-indiegogo-400x266.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/facebook-cover-indiegogo-400x266.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/thumbs\/facebook-cover-indiegogo-75x75.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2637,
+		"inputAbbreviatedPath": "\/thumbs\/facebook-cover-indiegogo-75x75.jpg",
+		"outputAbbreviatedPath": "\/thumbs\/facebook-cover-indiegogo-75x75.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
