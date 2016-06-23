@@ -7,6 +7,17 @@
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
   <meta name="description" content="<?php echo $site->description()->html() ?>">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@<?php echo $site->twitter()->html() ?>" />
+  <meta name="twitter:title" content="<?php echo $site->title()->html() ?>" />
+  <meta name="twitter:description" content="<?php echo $site->twittertext()->html() ?>" />
+  <meta name="twitter:image" content="<?php
+    if($image = $site->image('twitter.jpg')):
+      echo $image->url();
+    else:
+      echo $site->image()->url();
+    endif;
+  ?>" />
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
   <meta property ="og:title" content="<?php echo $page->title()->html() ?>">
   <meta property ="og:site_name" content="<?php echo $site->title()->html() ?>">

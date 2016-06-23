@@ -33,6 +33,17 @@
 
 <?php if($page->actionbuttons()->bool()) : ?>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5762bd511c2fc4b9"></script>
+  <script type="text/javascript">
+    var addthis_share = addthis_share || {}
+    addthis_share = {
+    	passthrough : {
+    		twitter: {
+    			via: "<?php echo $site->twitter()->html() ?>",
+    			text: "<?php echo $site->twittertext()->html() ?>"
+    		}
+    	}
+    }
+  </script>
 <?php endif ?>
 </body>
 </html>
