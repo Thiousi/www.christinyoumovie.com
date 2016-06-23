@@ -1,5 +1,5 @@
 <?php if($section->bgimage()->isNotEmpty()): ?>
-  <section class="<?php echo $page->slug() ?> text<?php e($section->bgimage()->isNotEmpty(),' bg-image') ?>"<?php e($section->bgimage()->isNotEmpty(),' data-scrollax-parent="true"') ?>>
+  <section class="zebra <?php echo $page->slug() ?> text<?php e($section->bgimage()->isNotEmpty(),' bg-image') ?>"<?php e($section->bgimage()->isNotEmpty(),' data-scrollax-parent="true"') ?>>
     <?php $sectionId = 'parallax-' . rand(10000,99999) ?>
     <?php if($section->bgheight()->isNotEmpty()): ?>
     <style>
@@ -23,7 +23,7 @@
     </div>
   </section>
 <?php else: ?>
-  <section class="<?php echo $page->slug() ?> text<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
+  <section class="zebra <?php echo $page->slug() ?> text<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
     <div class="inner">
       <?php if(!$section->hidetitle()->bool()): ?><h2><?php echo $section->title()->html() ?></h2><?php endif ?>
       <?php echo $section->text()->kt() ?>

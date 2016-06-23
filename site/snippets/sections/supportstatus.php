@@ -1,3 +1,4 @@
+<?php if(!$section->hide()->isTrue()): ?>
 <script type="text/javascript" language="javascript">
    window.addEventListener('load', function (){
      var totalAmount = 75000;
@@ -57,7 +58,7 @@
   }
 </script>
 
- <section class="supportstatus<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
+ <section class="supportstatus zebra<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner test">
     <?php echo str_replace('{%}', '<span id="percenttext" class="meter-percentage"></span>', $section->text()->kirbytext()) ?>
     <div class="progress-bar-indication">
@@ -71,3 +72,4 @@
     </div>
   </div>
 </section>
+<?php endif; ?>

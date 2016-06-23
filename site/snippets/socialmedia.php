@@ -1,5 +1,5 @@
 <?php if($page->socialall()->bool()): ?>
- <section class="text social<?php e($page->bgcolor()->isTrue(),' bg-gray') ?>">
+ <section class="text social zebra<?php e($page->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner">
     <?php if($page->socialtextline()->bool()): ?>
     <div class="social-text">

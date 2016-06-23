@@ -221,6 +221,17 @@ $parallax-background-height: $parallax-window-height * 2;
 //    }
 //  }
 //}
+//Alternate Section Color
+.content {
+  background-color: darken($bg-gray,5%) !important;
+}
+.content.even .content-2 {
+  background-color: $white !important;
+}
+.zebra.even, .content.odd .content-2 {
+  background-color: $bg-gray !important;
+}
+
 // Sections
 section {
   padding: 80px 20px;
@@ -250,9 +261,9 @@ section {
 
   }
 
-  &.bg-gray {
-    background-color: $bg-gray;
-  }
+  // &.bg-gray {
+  //   background-color: $bg-gray;
+  // }
   &.bg-image {
 
       overflow: hidden;

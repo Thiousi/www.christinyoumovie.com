@@ -1,4 +1,4 @@
-<section class="accordion<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>" id="accordion" data-accordion>
+<section class="accordion zebra<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>" id="accordion" data-accordion>
   <div class="inner">
     <h2><?php echo $section->title()->html() ?></h2>
     <?php echo $section->text()->kt() ?>
@@ -22,7 +22,7 @@
   </div>
 
   <?php foreach ($page->donations()->yaml() as $id => $item): ?>
-  <div id="donation-box-<?php echo $id ?>" class="content">
+  <div id="donation-box-<?php echo $id ?>" class="content zebra-child">
     <div class="inner payment-options">
       <h3><?php echo l::get('payment-options-title') ?></h3>
       <div class="btn-group">
@@ -48,7 +48,7 @@
         <?php endif ?>
       </div>
     </div>
-    <div id="postfinance-<?php echo $id ?>" class="content-2 pf">
+    <div id="postfinance-<?php echo $id ?>" class="content-2 zebra-child pf">
       <div class="inner e-payment">
         <?php if($page->children()->find('info')->showpostfinance()->bool()): ?>
         <h3><?php echo $page->children()->find('info')->titlepostfinance()->html() ?></h3>
@@ -77,7 +77,7 @@
       </div>
     </div>
     <?php if($page->children()->find('info')->showpaypal()->bool()): ?>
-    <div id="paypal-<?php echo $id ?>" class="content-2 pp">
+    <div id="paypal-<?php echo $id ?>" class="content-2 zebra-child pp">
       <div class="inner paypal">
        <h3><?php echo $page->children()->find('info')->titlepaypal()->html() ?></h3>
         <div class="infotext"><?php echo $page->children()->find('info')->infopaypal()->kt() ?></div>
@@ -114,7 +114,7 @@
     </div>
     <?php endif ?>
     <?php if($page->children()->find('info')->showbanktransfer()->bool()): ?>
-    <div id="transfer-<?php echo $id ?>" class="content-2 bt">
+    <div id="transfer-<?php echo $id ?>" class="content-2 zebra-child bt">
       <div class="inner bank-transfer">
         <h3><?php echo $page->children()->find('info')->titlebanktransfer()->html() ?></h3>
         <div class="infotext"><?php echo $page->children()->find('info')->infobanktransfer()->kt() ?></div>

@@ -1,4 +1,4 @@
-<section class="about<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
+<section class="about zebra<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
   <div class="inner">
     <h2><?php echo $section->title()->html() ?></h2>
     <?php echo $section->text()->kt() ?>

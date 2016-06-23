@@ -4,6 +4,20 @@ $(window).on("resize", function(){
     $(".fullscreen #banner").css({ "height": h });
 }).resize();
 
+
+// Set background-color to every odd element
+$('.zebra:odd').each(function(){
+  $(this).addClass('even');
+});
+if ( $( "#accordion" ).length ) {
+  console.log($('#accordion').is('.even'));
+  if($('#accordion').is('.even')) {
+    $('.content').addClass('odd');
+  } else {
+    $('.content').addClass('even');
+  }
+}
+
 $(document).ready(function () {
 
   // Parallax Section height

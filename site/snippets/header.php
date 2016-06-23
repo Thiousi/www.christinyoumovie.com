@@ -10,7 +10,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@<?php echo $site->twitter()->html() ?>" />
   <meta name="twitter:title" content="<?php echo $site->title()->html() ?>" />
-  <meta name="twitter:description" content="<?php echo $site->twittertext()->html() ?>" />
+  <meta name="twitter:description" content="<?php echo $site->facebooktext()->html() ?>" />
   <meta name="twitter:image" content="<?php
     if($image = $site->image('twitter.jpg')):
       echo $image->url();
@@ -45,7 +45,6 @@
 
   <script src="https://use.typekit.net/ohe1tps.js"></script>
   <script>try{Typekit.load({ async: true}); }catch(e){}</script>
-  <script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
   <?php snippet('google-analytics') ?>
 
 </head>
