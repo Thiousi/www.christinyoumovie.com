@@ -16,7 +16,7 @@ for more information: http://getkirby.com/license
 */
 @include 'license.php';
 
-c::set('panel.stylesheet', 'assets/css/custom-panel.css');
+//c::set('panel.stylesheet', 'assets/css/custom-panel.css');
 /*
 
 
