@@ -16,7 +16,7 @@ for more information: http://getkirby.com/license
 */
 @include 'license.php';
 
-// c::set('panel.stylesheet', 'assets/css/custom-panel.css');
+c::set('panel.stylesheet', 'assets/css/custom-panel.css');
 /*
 
 
@@ -33,7 +33,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 //Caching
-c::set('cache', false);
+c::set('cache', true);
 //
 c::set('cache.ignore', array(
   'support',

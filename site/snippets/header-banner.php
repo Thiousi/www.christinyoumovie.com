@@ -22,9 +22,9 @@
       } ?>
     <?php endif ?>
     <?php if($page->backgroundvideo()->isEmpty()): ?>
-    <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');"></div>
+    <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->resize(1200)->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');"></div>
     <?php else: ?>
-    <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');">
+    <div data-parallax="background" id="js-parallax-background" class="<?php if($page->isHomePage() || $page->fullscreen()->isTrue() ) { echo ''; } else { echo 'fixed-height ';} ?>parallax-background" style="background-position: center center; background-size: cover; background-image: url('<?php if ($page->backgroundimage()->isNotEmpty()): ?> <?php echo $site->image($page->backgroundimage())->resize(1200)->url() ?> <?php else: ?><?php echo $site->image('background.jpg')->url() ?><?php endif; ?>');">
       <div id="bg-video" class="hide-mobile"></div>
       <div class="video-overlay hide-mobile"></div>
     </div>

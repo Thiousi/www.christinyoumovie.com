@@ -13,7 +13,7 @@
       }
     </style>
     <?php endif; ?>
-    <div data-type="background" data-speed="-10" data-scrollax="properties: { translateY: '50%' }" class="parallax-section" id="<?php echo $sectionId ?>" style="background-image:url('<?php echo $section->bgimage()->toFile()->url() ?>');">
+    <div data-type="background" data-speed="-10" data-scrollax="properties: { translateY: '50%' }" class="parallax-section" id="<?php echo $sectionId ?>" style="background-image:url('<?php echo $section->bgimage()->toFile()->resize(1200)->url() ?>');">
     </div>
     <div class="outer">
       <div class="inner">
