@@ -663,6 +663,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/background.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 281315,
+		"inputAbbreviatedPath": "\/background.jpg",
+		"outputAbbreviatedPath": "\/background.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/components\/app.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
