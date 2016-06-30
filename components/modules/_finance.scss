@@ -1,4 +1,5 @@
 $progress-meter-color: #EB1378;
+$progress-meter-color-ch: #90DD71;
 $progress-background: #EFEFEF;
 $progress-animation-duration: 0.7s;
 $progress-color: white;
@@ -87,9 +88,26 @@ $progress-color: white;
     }
   }
 }
+
+
 .meter-percentage {
   color: $progress-meter-color;
   font-weight: 300;
+}
+.supportstatus.ch {
+  .progress-bar-indication {
+    span.meter {
+      background-color: $progress-meter-color-ch;
+    }
+    p {
+      &.outside, &.outside-m {
+        color:$progress-meter-color-ch;
+      }
+    }
+  }
+  .meter-percentage {
+    color: $progress-meter-color-ch;
+  }
 }
 
 .rewards-slider {

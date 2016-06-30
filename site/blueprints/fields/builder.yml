@@ -140,6 +140,34 @@ fieldsets:
         label: Hintergrundbild
         type: select
         options: images
+  supportstatusch:
+    label: Fortschrittbalken CH
+    entry: >
+      <b>Supportstatus</b><br>{{text}} <br >(Verstecken: {{hide}})
+
+    fields:
+      hide:
+        label: Verstecken
+        type: checkbox
+        text: Element nicht anzeigen.
+      text:
+        label: Text
+        type: textarea
+        help: {%} ist ein Platzhalter, der mit dem aktuellen Prozentsatz ersetzt wird.
+      amountstart:
+        label: Startbetrag
+        type: text
+        width: 1/2
+      amountend:
+        label: Endbetrag
+        type: text
+        width: 1/2
+      line:
+        type: line
+      bgimage:
+        label: Hintergrundbild
+        type: select
+        options: images
   goodiecontainer:
     label: Spendenoptionen (nur falls unten verfügbar)
     entry: >
