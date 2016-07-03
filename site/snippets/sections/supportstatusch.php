@@ -1,4 +1,5 @@
 <?php if(!$section->hide()->isTrue()): ?>
+
 <?php
 
 $csv = 'https://docs.google.com/spreadsheets/d/17envI202Lf5asAf0vbM1WTD76yekLBqMkNmN32D11yY/pub?gid=891382214&single=true&output=csv';
@@ -40,16 +41,52 @@ $total = $data[0][Ziel];
 $precent = 100 * $amount / $total;
 
 ?>
+<script type="text/javascript" language="javascript">
+   window.addEventListener('load', function (){
+    $.getJSON("https://api.indiegogo.com/1/campaigns/1769207.json?api_token=a3a779b95c1f3c4e6ae3c031ac2da1a864969516007b1b5ecd1799caeeb86b9f", function(gogodata) {
+      var totalAmount = numberWithCommas(gogodata.response.goal+ <?php echo $total ?>);
+      var raisedAmount = numberWithCommas(gogodata.response.collected_funds + <?php echo $amount ?>);
+      var contributors = numberWithCommas(gogodata.response.contributions_count);
+      var percentage = Math.round(100 * (gogodata.response.collected_funds+ <?php echo $amount ?>) / (gogodata.response.goal+ <?php echo $total ?>));
+
+      document.getElementById('counter').innerHTML = 'CHF '+ raisedAmount+'.-';
+      document.getElementById('percentbar').style.width = percentage + '%';
+      document.getElementById('percenttext').innerHTML = '<strong>' + percentage + '%</strong>';
+      document.getElementById('amountend').innerHTML = 'CHF '+ totalAmount+'.-';
+      if(percentage < 25) {
+        $('#counter').addClass('outside');
+      } else {
+        $('#counter').addClass('inside');
+      };
+      if(percentage < 45) {
+        $('#counter').addClass('outside-m');
+        document.getElementById('counter').style.left = percentage + '%';
+      };
+      // Viewportchecker
+      $('.start').viewportChecker({
+        classToRemove: 'zero',
+        offset: 100
+      });
+    });
+  });
+  function numberWithCommas(x) {
+    <?php if($site->language()->code() == 'en'): ?>
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    <?php else: ?>
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "'");
+    <?php endif; ?>
+  }
+</script>
 <section class="supportstatus ch zebra<?php e($section->bgcolor()->isTrue(),' bg-gray') ?>">
  <div class="inner test">
-   <?php echo str_replace('{%}', '<span class="meter-percentage"><strong>' . round($precent) . '%</strong></span>', $section->text()->kirbytext()) ?>
+   <?php echo str_replace('{%}', '<span id="percenttext" class="meter-percentage"></span>', $section->text()->kirbytext()) ?>
    <div class="progress-bar-indication">
-     <span class="meter start zero" style="width: <?php echo round($precent) ?>%">
-     <p id="counter" class="counter<?php if($precent < 25) { echo ' outside';} else { echo ' inside';} ?><?php if($precent < 45) { echo ' outside-m';} ?>"<?php if($precent < 45 ) { echo ' style="left:'.round($precent).'%"'; } ?>>CHF <?php echo number_format(str_replace(' ' , '', $amount), 0, '.', '\'') ?>.–</p>
+     <span id="percentbar" class="meter start zero">
+     <p id="counter" class="counter"></p>
      </span>
      <div class="amountrange">
-       <div class="amountstart"><?php echo $section->amountstart()->html() ?></div>
-       <div class="amountend"><?php echo $section->amountend()->html() ?></div>
+       <div id="amountstart" class="amountstart">CHF 0.-</div>
+       <div id="amountend" class="amountend"></div>
      </div>
    </div>
  </div>

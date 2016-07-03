@@ -103,6 +103,13 @@ $progress-color: white;
       &.outside, &.outside-m {
         color:$progress-meter-color-ch;
       }
+      @include media($medium-screen) {
+        &.inside.outside-m {
+          position: inherit;
+          color: $white;
+
+        }
+      }
     }
   }
   .meter-percentage {

@@ -141,7 +141,7 @@ fieldsets:
         type: select
         options: images
   supportstatusch:
-    label: Fortschrittbalken CH
+    label: Fortschrittbalken Total
     entry: >
       <b>Supportstatus</b><br>{{text}} <br >(Verstecken: {{hide}})
 
