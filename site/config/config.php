@@ -36,6 +36,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 c::set('cache', true);
 //
 c::set('cache.ignore', array(
+  'home',
   'support',
   'contact',
   'contact/send',
